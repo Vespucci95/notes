@@ -1,0 +1,197 @@
+{
+  "main": {
+    "id": "6ae138ecd140472e",
+    "type": "split",
+    "children": [
+      {
+        "id": "672aa7dfbebe39f7",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "b926f8e3c7e26991",
+            "type": "leaf",
+            "state": {
+              "type": "empty",
+              "state": {}
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "9e02fd0214274e6e",
+    "type": "split",
+    "children": [
+      {
+        "id": "69091704fed534ab",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "27226cab17a7e8e7",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical"
+              }
+            }
+          },
+          {
+            "id": "d664d54a4885a396",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              }
+            }
+          },
+          {
+            "id": "56ccf11f15333f34",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {}
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "right": {
+    "id": "2beb205edee8201a",
+    "type": "split",
+    "children": [
+      {
+        "id": "67c01c688e821061",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "ff604eaffb0c5b74",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "768a7397fb7d79c4",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "a030c88f508b6399",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true
+              }
+            }
+          },
+          {
+            "id": "9c4edd904bf82c48",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {}
+            }
+          },
+          {
+            "id": "bb7e8d6ce8b5ab35",
+            "type": "leaf",
+            "state": {
+              "type": "calendar",
+              "state": {}
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:퀵 스위처 열기": false,
+      "graph:그래프 뷰 열기": false,
+      "canvas:새 캔버스 만들기": false,
+      "daily-notes:오늘의 데일리 노트 열기": false,
+      "templates:템플릿 삽입": false,
+      "command-palette:명령어 팔레트 열기": false,
+      "table-editor-obsidian:Advanced Tables Toolbar": false,
+      "obsidian-excalidraw-plugin:Create new drawing": false
+    }
+  },
+  "active": "27226cab17a7e8e7",
+  "lastOpenFiles": [
+    "posts/reactnative-masonry-list-improvement-review.md",
+    "posts/what-is-lighthouse.md",
+    "posts/docker-compose-dev-web-playground.md",
+    "posts/blog-markdown.md",
+    "2024/4.md",
+    "2024/3.md",
+    "2024/2.md",
+    "2024/1.md",
+    "media/docker-study-01.png",
+    "media/docker-study-02.png",
+    "media/nextjs-with-docker.png",
+    "media/Pasted image 20240401051015.png",
+    "media/img-2.jpg",
+    "media/img-1.jpg",
+    "media/cate-feed-03.png",
+    "media/cate-feed-02.gif",
+    "media/cate-feed-01.png",
+    "media/brick.png",
+    "2024/react-native-1.md",
+    "Pasted.md",
+    "feed-gif-hd-01.md",
+    "img-1.png.md",
+    "2024/media",
+    "tips/4.md",
+    "tips/5.md",
+    "TypeScript/1.md",
+    "TypeScript/4.md",
+    "TypeScript/3.md",
+    "TypeScript/2.md",
+    "tips/2.md",
+    "2024",
+    "2024/03/1.md",
+    "2024/03",
+    "2024",
+    "tips/3.md",
+    "tips/4.md~",
+    "TypeScript",
+    "sub/TypeScript/1.md",
+    "sub/TypeScript",
+    "sub",
+    "main/TypeScript/1.md",
+    "main/TypeScript",
+    "main"
+  ]
+}
