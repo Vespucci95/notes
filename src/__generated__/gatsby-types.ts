@@ -1419,18 +1419,22 @@ export type MarkdownRemarkFieldSelector = {
 export type MarkdownRemarkFields = {
   __typename?: 'MarkdownRemarkFields';
   category?: Maybe<Scalars['String']['output']>;
+  path?: Maybe<Scalars['String']['output']>;
 };
 
 export type MarkdownRemarkFieldsFieldSelector = {
   category?: InputMaybe<FieldSelectorEnum>;
+  path?: InputMaybe<FieldSelectorEnum>;
 };
 
 export type MarkdownRemarkFieldsFilterInput = {
   category?: InputMaybe<StringQueryOperatorInput>;
+  path?: InputMaybe<StringQueryOperatorInput>;
 };
 
 export type MarkdownRemarkFieldsSortInput = {
   category?: InputMaybe<SortOrderEnum>;
+  path?: InputMaybe<SortOrderEnum>;
 };
 
 export type MarkdownRemarkFilterInput = {
@@ -2851,6 +2855,7 @@ export type SiteSiteMetadata = {
   defaultCategoryName?: Maybe<Scalars['String']['output']>;
   defaultPostTitle?: Maybe<Scalars['String']['output']>;
   description?: Maybe<Scalars['String']['output']>;
+  obsidianNoteName?: Maybe<Scalars['String']['output']>;
   siteUrl?: Maybe<Scalars['String']['output']>;
   title?: Maybe<Scalars['String']['output']>;
 };
@@ -2860,6 +2865,7 @@ export type SiteSiteMetadataFieldSelector = {
   defaultCategoryName?: InputMaybe<FieldSelectorEnum>;
   defaultPostTitle?: InputMaybe<FieldSelectorEnum>;
   description?: InputMaybe<FieldSelectorEnum>;
+  obsidianNoteName?: InputMaybe<FieldSelectorEnum>;
   siteUrl?: InputMaybe<FieldSelectorEnum>;
   title?: InputMaybe<FieldSelectorEnum>;
 };
@@ -2869,6 +2875,7 @@ export type SiteSiteMetadataFilterInput = {
   defaultCategoryName?: InputMaybe<StringQueryOperatorInput>;
   defaultPostTitle?: InputMaybe<StringQueryOperatorInput>;
   description?: InputMaybe<StringQueryOperatorInput>;
+  obsidianNoteName?: InputMaybe<StringQueryOperatorInput>;
   siteUrl?: InputMaybe<StringQueryOperatorInput>;
   title?: InputMaybe<StringQueryOperatorInput>;
 };
@@ -2878,6 +2885,7 @@ export type SiteSiteMetadataSortInput = {
   defaultCategoryName?: InputMaybe<SortOrderEnum>;
   defaultPostTitle?: InputMaybe<SortOrderEnum>;
   description?: InputMaybe<SortOrderEnum>;
+  obsidianNoteName?: InputMaybe<SortOrderEnum>;
   siteUrl?: InputMaybe<SortOrderEnum>;
   title?: InputMaybe<SortOrderEnum>;
 };
@@ -2925,17 +2933,12 @@ export type WebPOptions = {
   quality?: InputMaybe<Scalars['Int']['input']>;
 };
 
-export type AllCategoriesDataQueryVariables = Exact<{ [key: string]: never; }>;
-
-
-export type AllCategoriesDataQuery = { __typename?: 'Query', allMarkdownRemark: { __typename?: 'MarkdownRemarkConnection', group: Array<{ __typename?: 'MarkdownRemarkGroupConnection', fieldValue?: string | null, totalCount: number, edges: Array<{ __typename?: 'MarkdownRemarkEdge', node: { __typename?: 'MarkdownRemark', id: string, frontmatter?: { __typename?: 'MarkdownRemarkFrontmatter', title?: string | null } | null } }> }> } };
-
 export type SiteMetadataConfigQueryVariables = Exact<{ [key: string]: never; }>;
 
 
-export type SiteMetadataConfigQuery = { __typename?: 'Query', site?: { __typename?: 'Site', siteMetadata?: { __typename?: 'SiteSiteMetadata', title?: string | null, categoryFieldName?: string | null, defaultCategoryName?: string | null, defaultPostTitle?: string | null } | null } | null };
+export type SiteMetadataConfigQuery = { __typename?: 'Query', site?: { __typename?: 'Site', siteMetadata?: { __typename?: 'SiteSiteMetadata', title?: string | null, categoryFieldName?: string | null, defaultCategoryName?: string | null, defaultPostTitle?: string | null, obsidianNoteName?: string | null } | null } | null };
 
-export type AllCategoriesQueryVariables = Exact<{ [key: string]: never; }>;
+export type AllCategoriesDataQueryVariables = Exact<{ [key: string]: never; }>;
 
 
-export type AllCategoriesQuery = { __typename?: 'Query', allMarkdownRemark: { __typename?: 'MarkdownRemarkConnection', group: Array<{ __typename?: 'MarkdownRemarkGroupConnection', fieldValue?: string | null, totalCount: number, edges: Array<{ __typename?: 'MarkdownRemarkEdge', node: { __typename?: 'MarkdownRemark', id: string, frontmatter?: { __typename?: 'MarkdownRemarkFrontmatter', title?: string | null } | null } }> }> } };
+export type AllCategoriesDataQuery = { __typename?: 'Query', allMarkdownRemark: { __typename?: 'MarkdownRemarkConnection', group: Array<{ __typename?: 'MarkdownRemarkGroupConnection', fieldValue?: string | null, totalCount: number, edges: Array<{ __typename?: 'MarkdownRemarkEdge', node: { __typename?: 'MarkdownRemark', id: string, frontmatter?: { __typename?: 'MarkdownRemarkFrontmatter', title?: string | null } | null, fields?: { __typename?: 'MarkdownRemarkFields', path?: string | null } | null } }> }> } };

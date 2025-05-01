@@ -10,6 +10,7 @@ export const SiteMetadataQuery = graphql`
                 categoryFieldName
                 defaultCategoryName
                 defaultPostTitle
+                obsidianNoteName
             }
         }
     }

@@ -13,12 +13,12 @@ const SNB = () => {
       >
         {
           categoryList.map(({ categoryName, posts }) => (
-            <Accordion.Item value={categoryName}>
+            <Accordion.Item value={categoryName} key={categoryName}>
               <Accordion.Trigger>{categoryName}</Accordion.Trigger>
               <Accordion.Content>
                 {
                   posts.map(({ title, path }) => (
-                    <Link to={path} style={{ display: 'block' }}>{title}</Link>
+                    <Link key={`${categoryName}-${title}}`} to={path} style={{ display: 'block' }}>{title}</Link>
                   ))
                 }
               </Accordion.Content>

@@ -2,13 +2,13 @@ import { CreateNodeArgs, GatsbyNode } from 'gatsby';
 import TsconfigPathsPlugin from 'tsconfig-paths-webpack-plugin';
 import { createFilePath } from 'gatsby-source-filesystem';
 
-const createSlugField = ({ node, getNode, actions, store }: CreateNodeArgs) => {
+const createPostPathField = ({ node, getNode, actions, store }: CreateNodeArgs) => {
   const { createNodeField } = actions;
   const siteMetadata = store.getState().config.siteMetadata;
 
   if (node.internal.type === `MarkdownRemark`) {
-    const slug = createFilePath({ node, getNode, basePath: siteMetadata.obsidianNoteName });
-    createNodeField({ node, name: 'slug', value: slug });
+    const path = createFilePath({ node, getNode, basePath: siteMetadata.obsidianNoteName });
+    createNodeField({ node, name: 'path', value: path });
   }
 }
 
@@ -37,7 +37,7 @@ const createCategoryField = ({ node, getNode, actions, store, reporter }: Create
 }
 
 export const onCreateNode: GatsbyNode['onCreateNode'] = (a) => [
-  createSlugField,
+  createPostPathField,
   createCategoryField
 ].forEach(f => f(a))
 

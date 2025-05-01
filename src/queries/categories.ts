@@ -13,6 +13,9 @@ export const AllCategoriesQuery = graphql`
                         frontmatter {
                             title
                         }
+                        fields {
+                            path
+                        }
                     }
                 }
             }
