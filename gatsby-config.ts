@@ -2,8 +2,13 @@ import type { GatsbyConfig } from "gatsby";
 
 const config: GatsbyConfig = {
   siteMetadata: {
+    /**
+     * 데이터 추가 시
+     * src/queries/app-config.ts
+     */
     title: `study-books`,
     siteUrl: `https://www.yourdomain.tld`,
+    obsidianNoteName: 'notes',
     categoryFieldName: 'category',
     defaultCategoryName: '기본',
     defaultPostTitle: '제목 없음'
