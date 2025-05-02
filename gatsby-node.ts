@@ -1,7 +1,6 @@
 import { CreateNodeArgs, GatsbyNode } from 'gatsby';
 import TsconfigPathsPlugin from 'tsconfig-paths-webpack-plugin';
 import { createFilePath } from 'gatsby-source-filesystem';
-
 const createPostPathField = ({ node, getNode, actions, store }: CreateNodeArgs) => {
   const { createNodeField } = actions;
   const siteMetadata = store.getState().config.siteMetadata;
@@ -34,6 +33,48 @@ const createCategoryField = ({ node, getNode, actions, store, reporter }: Create
 
     createNodeField({ node, name: siteMetadata.categoryFieldName, value: category });
   }
+}
+
+type CreatePageQuery = {
+  allMarkdownRemark: {
+    edges: Array<{
+      node: {
+        fields: {
+          path: string
+        }
+      }
+    }>
+  }
+}
+
+export const createPages: GatsbyNode['createPages'] = async ({ actions, graphql, reporter }) => {
+  const {createPage} = actions;
+  const result = await graphql<CreatePageQuery>(`
+      query CreatePage {
+          allMarkdownRemark {
+              edges {
+                  node {
+                      fields {
+                          path
+                      }
+                  }
+              }
+          }
+      }
+  `)
+
+  if(!result.data || result.errors) {
+    reporter.panicOnBuild(`[createPages] 데이터를 불러오지 못하였습니다.`)
+    return;
+  }
+
+  result.data.allMarkdownRemark.edges.forEach(({ node }) => {
+    createPage({
+      path: node.fields.path,
+      component: `${__dirname}/src/templates/post_template.tsx`,
+      context: {},
+    })
+  })
 }
 
 export const onCreateNode: GatsbyNode['onCreateNode'] = (a) => [
