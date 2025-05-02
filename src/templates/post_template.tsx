@@ -1,6 +1,6 @@
 import * as React from "react"
 
-const PostTemplate = (props) => {
+const PostTemplate = (props: any) => {
   return (
     <div>
       {JSON.stringify(props)}
