@@ -1,134 +1,288 @@
-.markdown {
-    display: flex;
-    flex-direction: column;
-    width: 100%;
+@mixin markdown() {
+  line-height: 1.6;
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  p,
+  li {
+    color: #FFF;
+  }
+
+  h1,
+  h2,
+  h3 {
+    margin-top: 1.25em;
+    line-height: 1.14;
+  }
+
+  h1 {
+    margin-bottom: 0.4em;
+    font-size: 2em;
+    font-weight: 300;
+
+    :first-child {
+      margin-top: unset;
+    }
+  }
+
+  h2 {
+    margin-bottom: 0.3em;
+    font-size: 1.8em;
+    font-weight: 300;
+
+    :first-child {
+      margin-top: unset;
+    }
+  }
+
+  h3 {
+    margin-bottom: 0.25em;
+    font-size: 1.5em;
+    font-weight: 300;
+
+    :first-child {
+      margin-top: unset;
+    }
+  }
+
+  h4 {
+    margin-bottom: 0.2em;
+    font-size: 1.375em;
+    font-weight: 300;
+  }
+
+  h5 {
+    font-size: 1.3em;
+    font-weight: 300;
+  }
+
+  h6 {
+    font-size: 1.1em;
+    font-weight: 300;
+  }
+
+  p {
+    margin-bottom: 0.825em;
+  }
+
+  ul {
+    padding-left: 2em;
+    list-style-type: '– ';
+  }
+
+  ol {
+    padding-left: 2em;
+  }
+
+  li {
+    margin-bottom: 0.2em;
+  }
+
+  li:last-child {
+    margin-bottom: 1em;
+  }
+
+  li p {
+    margin: 0;
+  }
+
+  img {
+    pointer-events: none;
+    display: block;
     margin: 0 auto;
+    position: relative;
+  }
 
-    code[class*="language-"],
-    pre[class*="language-"] {
-        color: #ACB2BE;
-        background: none;
-        font-family: JetBrains Mono, Pretendard, sans-serif;
-        font-weight: 300;
-        font-size: 0.875em;
-        text-align: left;
-        white-space: pre;
-        word-spacing: normal;
-        word-break: normal;
-        word-wrap: normal;
-        line-height: 1.5;
+  img::before {
+    content: '이미지를 불러오지 못했습니다.';
+    display: block;
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+    background: #000;
+    position: absolute;
+    left: 0;
+    top: 0;
+    text-align: center;
+    text-decoration: line-through;
+  }
 
-        -moz-tab-size: 4;
-        -o-tab-size: 4;
-        tab-size: 4;
+  table {
+    width: 100%;
+    border: 1px solid red;
+    border-collapse: collapse;
+  }
 
-        -webkit-hyphens: none;
-        -moz-hyphens: none;
-        -ms-hyphens: none;
-        hyphens: none;
-    }
+  th,
+  td {
+    color: #FFF;
+    border: 1px solid #FFF;
+  }
 
-    /* Code blocks */
-    pre[class*="language-"] {
-        padding: 1em 1.2em;
-        margin: .5em 0;
-        overflow: auto;
-    }
+  th {
+    padding: 4px 0;
+    font-weight: 300;
+  }
 
-    :not(pre) > code[class*="language-"],
-    pre[class*="language-"] {
-        background: #292C33;
-        border-radius: 12px;
-    }
+  td {
+    padding: 2px 10px;
+  }
 
-    /* Inline code */
-    :not(pre) > code[class*="language-"] {
-        padding: .1em;
-        border-radius: .3em;
-        white-space: normal;
-    }
+  hr {
+    margin: 2.5em 0;
+  }
 
-    .token.comment,
-    .token.block-comment,
-    .token.prolog,
-    .token.doctype,
-    .token.cdata {
-        color: #999;
-    }
+  strong {
+    font-weight: 500;
+  }
 
-    .token.punctuation {
-        color: #DFBB52;
-    }
+  blockquote {
+    border-left: 3px solid #FFF;
+    padding-left: 6px;
+  }
+}
 
-    .token.tag,
-    .token.attr-name,
-    .token.namespace,
-    .token.deleted {
-        color: #BB9269;
-    }
+.markdown {
+  @include markdown();
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  margin: 0 auto;
 
-    .token.function-name {
-        color: #74ADE9;
-    }
+  code[class*="language-"],
+  pre[class*="language-"] {
+    color: #ACB2BE;
+    background: none;
+    font-family: JetBrains Mono, Pretendard, sans-serif;
+    font-weight: 300;
+    font-size: 0.875em;
+    text-align: left;
+    white-space: pre;
+    word-spacing: normal;
+    word-break: normal;
+    word-wrap: normal;
+    line-height: 1.5;
 
-    .token.boolean,
-    .token.number,
-    .token.function {
-        color: #74ADE9;
-    }
+    -moz-tab-size: 4;
+    -o-tab-size: 4;
+    tab-size: 4;
 
-    .token.property,
-    .token.class-name,
-    .token.constant,
-    .token.symbol {
-        color: #5CBAA5;
-    }
+    -webkit-hyphens: none;
+    -moz-hyphens: none;
+    -ms-hyphens: none;
+    hyphens: none;
+  }
 
-    .token.selector,
-    .token.important,
-    .token.atrule,
-    .token.keyword,
-    .token.builtin {
-        color: #BC7CD7;
-    }
+  /* Code blocks */
+  pre[class*="language-"] {
+    padding: 1em 1.2em;
+    margin: .5em 0;
+    overflow: auto;
+  }
 
-    .token.string,
-    .token.char,
-    .token.attr-value,
-    .token.regex,
-    .token.variable {
-        color: #A1C281;
-    }
+  :not(pre) > code[class*="language-"],
+  pre[class*="language-"] {
+    background: #292C33;
+    border-radius: 12px;
+  }
 
-    .token.operator,
-    .token.entity,
-    .token.url {
-        color: #ACB2BE;
-    }
+  /* Inline code */
+  :not(pre) > code[class*="language-"] {
+    padding: .1em;
+    border-radius: .3em;
+    white-space: normal;
+  }
 
-    .token.important,
-    .token.bold {
-        font-weight: bold;
-    }
+  .token.comment,
+  .token.block-comment,
+  .token.prolog,
+  .token.doctype,
+  .token.cdata {
+    color: #999;
+  }
 
-    .token.italic {
-        font-style: italic;
-    }
+  .token.punctuation {
+    color: #DFBB52;
+  }
 
-    .token.entity {
-        cursor: help;
-    }
+  .token.tag,
+  .token.attr-name,
+  .token.namespace,
+  .token.deleted {
+    color: #BB9269;
+  }
 
-    .token.inserted {
-        color: #98B87B;
-    }
+  .token.function-name {
+    color: #74ADE9;
+  }
+
+  .token.boolean,
+  .token.number,
+  .token.function {
+    color: #74ADE9;
+  }
+
+  .token.property,
+  .token.class-name,
+  .token.constant,
+  .token.symbol {
+    color: #5CBAA5;
+  }
+
+  .token.selector,
+  .token.important,
+  .token.atrule,
+  .token.keyword,
+  .token.builtin {
+    color: #BC7CD7;
+  }
+
+  .token.string,
+  .token.char,
+  .token.attr-value,
+  .token.regex,
+  .token.variable {
+    color: #A1C281;
+  }
+
+  .token.operator,
+  .token.entity,
+  .token.url {
+    color: #ACB2BE;
+  }
+
+  .token.important,
+  .token.bold {
+    font-weight: bold;
+  }
+
+  .token.italic {
+    font-style: italic;
+  }
+
+  .token.entity {
+    cursor: help;
+  }
+
+  .token.inserted {
+    color: #98B87B;
+  }
+
+  .language-yml {
+    background: red;
+  }
+
 }
 
 main .markdown code[class*=language-text] {
-    color: #FFF;
-    background: #292C33;
-    font-weight: 300;
-    border-radius: 4px;
-    padding: 0.15em 0.5em;
-    font-size: 0.9em
+  color: #FFF;
+  background: #292C33;
+  font-weight: 300;
+  border-radius: 4px;
+  padding: 0.15em 0.5em;
+  font-size: 0.9em
 }

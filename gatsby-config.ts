@@ -38,7 +38,13 @@ const config: GatsbyConfig = {
               quality: 100,
               withWebp: true,
             },
-          }
+          },
+          {
+            resolve: 'gatsby-remark-prismjs',
+            options: {
+              classPrefix: 'language-',
+            },
+          },
         ]
       }
     },

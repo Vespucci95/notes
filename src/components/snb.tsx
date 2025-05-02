@@ -7,7 +7,10 @@ const SNB = () => {
   const categoryList = useCategoryListViewModel();
 
   return (
-    <aside>
+    <nav className="nav-snb-container">
+      <Link to="/">
+        Main
+      </Link>
       <Accordion.Root
         type='multiple'
       >
@@ -26,7 +29,7 @@ const SNB = () => {
           ))
         }
       </Accordion.Root>
-    </aside>
+    </nav>
   )
 }
 
