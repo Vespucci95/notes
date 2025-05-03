@@ -9,6 +9,7 @@
   margin-bottom: fn.rem(30px);
 
   h1 {
+    @include mixin.selection();
     font-size: fn.rem(32px);
     font-weight: 500;
     line-height: 1.14;
@@ -16,6 +17,7 @@
   }
 
   div {
+    @include mixin.selection(transparent);
     font-size: fn.rem(13px);
     @include mixin.flex(start, start) {
       gap: fn.rem(14px);

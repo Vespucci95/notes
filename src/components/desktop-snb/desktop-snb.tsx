@@ -3,11 +3,11 @@ import { Accordion } from 'radix-ui';
 import { useCategoryListViewModel } from '@/hooks/use-category-list-view-model';
 import { Link } from 'gatsby';
 
-const SNB = () => {
+const DesktopSnb = () => {
   const categoryList = useCategoryListViewModel();
 
   return (
-    <nav className="nav-snb-container">
+    <nav>
       <Link to="/">
         Main
       </Link>
@@ -31,4 +31,4 @@ const SNB = () => {
   )
 }
 
-export default SNB;
+export default DesktopSnb;

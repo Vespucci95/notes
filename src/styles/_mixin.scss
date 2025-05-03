@@ -55,3 +55,16 @@
   }
   @content;
 }
+
+@mixin selection($background-color: #D04E0C, $color: inherit) {
+  &::selection {
+    background-color: $background-color;  // 선택 영역 배경색
+    color: $color
+  }
+
+  // Firefox 브라우저를 위한 설정
+  &::-moz-selection {
+    background-color: $background-color;
+    color: $color
+  }
+}

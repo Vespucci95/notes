@@ -1,3 +1,4 @@
+@use '../styles/mixin';
 @use '../styles/function' as fn;
 
 @mixin markdown() {
@@ -9,11 +10,13 @@
   h4,
   h5,
   h6, {
+    @include mixin.selection();
     color: #FFF;
   }
 
   p,
   li {
+    @include mixin.selection();
     color: #d1d5db;
   }
 
@@ -97,6 +100,7 @@
   }
 
   img {
+    @include mixin.selection(transparent);
     display: block;
     width: auto;
     height: auto;
@@ -174,6 +178,7 @@
 
   code[class*="language-"],
   pre[class*="language-"] {
+    @include mixin.selection(#404859);
     color: #ACB2BE;
     background: none;
     font-family: JetBrains Mono, Pretendard, sans-serif;
