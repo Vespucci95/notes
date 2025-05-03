@@ -6,10 +6,13 @@
   h3,
   h4,
   h5,
-  h6,
+  h6, {
+    color: #FFF;
+  }
+
   p,
   li {
-    color: #FFF;
+    color: #d1d5db;
   }
 
   h1,
@@ -91,8 +94,11 @@
   }
 
   img {
-    pointer-events: none;
     display: block;
+    width: auto;
+    height: auto;
+    object-fit: contain;
+    pointer-events: none;
     margin: 0 auto;
     position: relative;
   }
@@ -103,7 +109,7 @@
     overflow: hidden;
     width: 100%;
     height: 100%;
-    background: #000;
+    background: #121212;
     position: absolute;
     left: 0;
     top: 0;
@@ -113,7 +119,7 @@
 
   table {
     width: 100%;
-    border: 1px solid red;
+    border: 1px solid #FFF;
     border-collapse: collapse;
   }
 
@@ -141,8 +147,18 @@
   }
 
   blockquote {
-    border-left: 3px solid #FFF;
-    padding-left: 6px;
+    border-left: 5px solid #384151;
+    padding-left: 12px;
+    font-style: italic;
+    p {
+      color: #FFF;
+      font-weight: 400;
+    }
+  }
+
+  .title {
+    color: #DCDCDC;
+    font-weight: 600;
   }
 }
 
@@ -151,6 +167,7 @@
   display: flex;
   flex-direction: column;
   width: 100%;
+  max-width: 768px;
   margin: 0 auto;
 
   code[class*="language-"],
@@ -271,11 +288,6 @@
   .token.inserted {
     color: #98B87B;
   }
-
-  .language-yml {
-    background: red;
-  }
-
 }
 
 main .markdown code[class*=language-text] {

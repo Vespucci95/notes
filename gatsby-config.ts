@@ -37,6 +37,7 @@ const config: GatsbyConfig = {
               maxWidth: 768,
               quality: 100,
               withWebp: true,
+              linkImagesToOriginal: false,
             },
           },
           {

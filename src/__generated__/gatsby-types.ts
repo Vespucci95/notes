@@ -2942,3 +2942,10 @@ export type AllCategoriesDataQueryVariables = Exact<{ [key: string]: never; }>;
 
 
 export type AllCategoriesDataQuery = { __typename?: 'Query', allMarkdownRemark: { __typename?: 'MarkdownRemarkConnection', group: Array<{ __typename?: 'MarkdownRemarkGroupConnection', fieldValue?: string | null, totalCount: number, edges: Array<{ __typename?: 'MarkdownRemarkEdge', node: { __typename?: 'MarkdownRemark', id: string, frontmatter?: { __typename?: 'MarkdownRemarkFrontmatter', title?: string | null } | null, fields?: { __typename?: 'MarkdownRemarkFields', path?: string | null } | null } }> }> } };
+
+export type PostQueryVariables = Exact<{
+  path?: InputMaybe<Scalars['String']['input']>;
+}>;
+
+
+export type PostQuery = { __typename?: 'Query', markdownRemark?: { __typename?: 'MarkdownRemark', id: string, html?: string | null, frontmatter?: { __typename?: 'MarkdownRemarkFrontmatter', title?: string | null, date?: any | null, categories?: string | null, description?: string | null } | null } | null };
