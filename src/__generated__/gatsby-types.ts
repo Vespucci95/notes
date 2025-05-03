@@ -2948,4 +2948,4 @@ export type PostQueryVariables = Exact<{
 }>;
 
 
-export type PostQuery = { __typename?: 'Query', markdownRemark?: { __typename?: 'MarkdownRemark', id: string, html?: string | null, frontmatter?: { __typename?: 'MarkdownRemarkFrontmatter', title?: string | null, date?: any | null, categories?: string | null, description?: string | null } | null } | null };
+export type PostQuery = { __typename?: 'Query', markdownRemark?: { __typename?: 'MarkdownRemark', id: string, html?: string | null, frontmatter?: { __typename?: 'MarkdownRemarkFrontmatter', title?: string | null, date?: any | null, categories?: string | null, description?: string | null } | null, fields?: { __typename?: 'MarkdownRemarkFields', category?: string | null } | null } | null };

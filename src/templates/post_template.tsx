@@ -2,25 +2,32 @@ import * as React from "react"
 import { graphql } from 'gatsby';
 import { PostQuery } from '@/__generated__/gatsby-types'
 import { DeepRequired } from '@/types';
+import PostHeader from '@/components/post-header/post-header';
+
+const MDX = ({ html }: { html: string }) => {
+  return (
+    <div className="markdown">
+      <div dangerouslySetInnerHTML={{ __html: html }} />
+    </div>
+  )
+}
 
 const PostTemplate = ({ data }: { data: DeepRequired<PostQuery> }) => {
   return (
-    <div className="markdown">
-      <div>
-        <h1 className="title">{data.markdownRemark.frontmatter.title}</h1>
-        <div>
-          <p>{data.markdownRemark.frontmatter.description}</p>
-          <p>{data.markdownRemark.frontmatter.date}</p>
-        </div>
-      </div>
-      <div dangerouslySetInnerHTML={{ __html: data.markdownRemark.html }} />
+    <div style={{ width: '100%' }}>
+      <PostHeader
+        title={data.markdownRemark.frontmatter.title}
+        category={data.markdownRemark.fields.category}
+        date={data.markdownRemark.frontmatter.date}
+      />
+      <MDX html={data.markdownRemark.html} />
     </div>
   )
 }
 
 export const query = graphql`
-    query Post($path:String) {
-        markdownRemark(fields:{ path:{ eq: $path } }) {
+    query Post($path: String) {
+        markdownRemark(fields: {path: {eq: $path}}) {
             id
             html
             frontmatter {
@@ -28,6 +35,9 @@ export const query = graphql`
                 date(formatString: "YYYY.MM.DD")
                 categories
                 description
+            }
+            fields {
+                category
             }
         }
     }
