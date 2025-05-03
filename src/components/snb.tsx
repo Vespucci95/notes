@@ -11,9 +11,7 @@ const SNB = () => {
       <Link to="/">
         Main
       </Link>
-      <Accordion.Root
-        type='multiple'
-      >
+      <Accordion.Root type='multiple'>
         {
           categoryList.map(({ categoryName, posts }) => (
             <Accordion.Item value={categoryName} key={categoryName}>

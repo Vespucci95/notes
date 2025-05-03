@@ -1,17 +1,8 @@
+@use './mixin';
+
 @import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css");
 @import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800&family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap');
 @import url('https://fonts.cdnfonts.com/css/morena');
-
-@mixin hide-scrollbar() {
-  /* Firefox */
-  scrollbar-width: none;
-  /* IE and Edge */
-  -ms-overflow-style: none;
-  /* WebKit-based browsers (Chrome, Safari) */
-  &::-webkit-scrollbar {
-    display: none;
-  }
-}
 
 :root {
   overflow-wrap: break-word;
@@ -25,7 +16,7 @@
 }
 
 html {
-  @include hide-scrollbar();
+  @include mixin.hide-scrollbar();
   font-size: 16px;
   line-height: 1.5;
   font-family: Pretendard, Noto Sans KR, Noto Sans, Helvetica Neue, Helvetica, Arial, sans-serif;
@@ -49,29 +40,13 @@ a {
  * ----------------------------------------------------------------------------------------------- */
 
 $max-width: 980px;
+$sidebar-width: 300px;
+$gap: 20px;
+$desktop-width: $max-width + $sidebar-width * 2 + $gap * 2;
 
 header {
   max-width: $max-width;
   margin: 0 auto;
-  //background: green;
-}
-
-main {
-  display: flex;
-  position: relative;
-  flex-direction: column;
-  align-items: center;
-  max-width: $max-width;
-  min-height: 100vh;
-  margin: 0 auto;
-  padding: 20px 0 60px 0;
-  flex: 1;
-  box-sizing: border-box;
-
-  @media (max-width: 768px) {
-    padding: 10px 0 40px 0;
-    background: red;
-  }
 }
 
 footer {
@@ -79,24 +54,52 @@ footer {
   margin: 0 auto;
 }
 
-.contents {
+.layout {
   display: flex;
-  flex-direction: row;
+  min-height: 100vh;
   height: 100%;
-  overflow: hidden;
+  overflow-y: hidden;
+
+  main {
+    display: flex;
+    width: 100%;
+    max-width: $max-width;
+    position: relative;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 auto;
+    padding: 20px 0 60px 0;
+    box-sizing: border-box;
+
+    @media (max-width: $max-width) {
+      padding: 10px 0 40px 0;
+    }
+  }
+
+  .side {
+    @include mixin.hide-scrollbar();
+    display: flex;
+    width: $sidebar-width;
+    max-height: 60vh;
+    position: fixed;
+    overflow-y: scroll;
+
+    &-left {
+      top: 0;
+      right: calc(50% + $max-width / 2 + $gap);
+    }
+
+    &-right {
+      align-items: center;
+      justify-content: center;
+      left: calc(50% + $max-width / 2 + $gap);
+      top: 50%;
+      transform: translateY(-50%);
+    }
+
+    @media screen and (max-width: $desktop-width) {
+      display: none;
+    }
+  }
 }
 
-.nav-snb-container {
-  @include hide-scrollbar();
-  //display: none;
-  display: flex;
-  flex-direction: column;
-  width: 356px;
-  height: 100%;
-  position: absolute;
-  top: 0;
-  left: -356px;
-  border-right: 1px solid #272B2E;
-  overflow-y: scroll;
-  background: red;
-}

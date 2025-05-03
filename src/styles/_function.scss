@@ -1,0 +1,55 @@
+@use "sass:math";
+@use "sass:map";
+
+@function breakpoint($size) {
+  $breakpoints: (
+    "xs": 480px,
+    "sm": 768px,
+    "md": 1024px,
+    "lg": 1280px,
+    "xl": 1440px
+  );
+
+  @if map.has-key($breakpoints, $size) {
+    @return map.get($breakpoints, $size);
+  } @else {
+    @error "Breakpoint `#{$size}` not found. Available: xs, sm, md, lg, xl.";
+  }
+}
+
+// px → rem 변환 함수
+@function rem($px) {
+  @return math.div($px, 16px) * 1rem;
+}
+
+@function radius($size) {
+  $border-radius: (
+    "xs": 6px,
+    "sm": 8px,
+    "md": 12px,
+    "lg": 16px,
+    "xl": 24px
+  );
+
+  @if map.has-key($border-radius, $size) {
+    @return map.get($border-radius, $size)
+  } @else {
+    @error "Available: xs, sm, md, lg, xl."
+  }
+}
+
+@function fontSize($size) {
+  $font-size: (
+    "xs": rem(12px),
+    "sm": rem(14px),
+    "md": rem(16px),
+    "lg": rem(20px),
+    "xl": rem(24px)
+  );
+
+  @if map.has-key($font-size, $size) {
+    @return map.get($font-size, $size)
+  } @else {
+    @error "Available: xs, sm, md, lg, xl."
+  }
+}

@@ -1,0 +1,14 @@
+.nav-snb-container {
+  @include hide-scrollbar();
+  //display: none;
+  display: flex;
+  flex-direction: column;
+  width: 356px;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: -356px;
+  border-right: 1px solid #272B2E;
+  overflow-y: scroll;
+  background: red;
+}

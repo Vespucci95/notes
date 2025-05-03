@@ -1,0 +1,57 @@
+@use './function' as fn;
+
+/* -------------------------------------------------------------------------------------------------
+ * Layout
+ * ----------------------------------------------------------------------------------------------- */
+
+@mixin flex($align, $justify) {
+  display: flex;
+  align-items: $align;
+  justify-content: $justify;
+  @content;
+}
+
+@mixin respond-to($size) {
+  @media (max-width: fn.breakpoint($size)) {
+    @content;
+  }
+}
+
+@mixin theme($light, $dark) {
+  @media (prefers-color-scheme: dark) {
+    @content;
+    background-color: $dark;
+  }
+
+  @media (prefers-color-scheme: light) {
+    @content;
+    background-color: $light;
+  }
+}
+
+@mixin padding($y, $x) {
+  padding: fn.rem($y) fn.rem($x);
+  @content;
+}
+
+@mixin radius($size) {
+  border-radius: fn.radius($size);
+  @content;
+}
+
+@mixin font($size) {
+  font-size: fn.fontSize($size);
+  @content;
+}
+
+@mixin hide-scrollbar() {
+  /* Firefox */
+  scrollbar-width: none;
+  /* IE and Edge */
+  -ms-overflow-style: none;
+  /* WebKit-based browsers (Chrome, Safari) */
+  &::-webkit-scrollbar {
+    display: none;
+  }
+  @content;
+}

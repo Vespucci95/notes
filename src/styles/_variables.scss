@@ -1,0 +1,31 @@
+@use 'sass:color';
+
+/* -------------------------------------------------------------------------------------------------
+ * colors
+ * ----------------------------------------------------------------------------------------------- */
+$background: #F5F5F5;
+$gray-50: #EFEFEC;
+$gray-100: #D7D7C6;
+$gray-200: #9AA1AF;
+$gray-300: #4A4A4A; // sub text
+$primary-white: #F3704C;
+$primary: #F25F35;
+$primary-dark: #E7552E;
+$white: #FFF;
+$black: #000;
+$black-alpha-10: color.scale($black, $lightness: 10%);
+$black-alpha-20: color.scale($black, $lightness: 20%);
+$black-alpha-30: color.scale($black, $lightness: 30%);
+$black-alpha-40: color.scale($black, $lightness: 40%);
+$black-alpha-50: color.scale($black, $lightness: 50%);
+$black-alpha-60: color.scale($black, $lightness: 60%);
+$black-alpha-70: color.scale($black, $lightness: 70%);
+$black-alpha-80: color.scale($black, $lightness: 80%);
+$black-alpha-90: color.scale($black, $lightness: 90%);
+
+/* -------------------------------------------------------------------------------------------------
+ * sizes
+ * ----------------------------------------------------------------------------------------------- */
+
+$lg-max-width: 1200px;
+$lg-max-content: 600px;
