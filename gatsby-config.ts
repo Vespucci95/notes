@@ -64,6 +64,15 @@ const config: GatsbyConfig = {
               classPrefix: 'language-',
             },
           },
+          {
+            resolve: `gatsby-remark-autolink-headers`,
+            options: {
+              className: `post-toc`,
+              maintainCase: false,
+              removeAccents: true,
+              elements: [`h1`, `h2`, `h3`]
+            },
+          },
         ]
       }
     },
