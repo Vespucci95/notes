@@ -47,6 +47,7 @@
     "@types/react-dom": "^18.2.19",
     "gatsby-plugin-sass": "^6.14.0",
     "gatsby-remark-autolink-headers": "^6.14.0",
+    "gh-pages": "^6.3.0",
     "sass": "^1.87.0",
     "tsconfig-paths-webpack-plugin": "^4.2.0",
     "typescript": "^5.3.3"
