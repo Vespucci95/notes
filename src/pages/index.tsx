@@ -14,7 +14,7 @@ const IndexPage: React.FC<PageProps> = ({ data }) => {
       }}
       style={{ width: '100%' }}
     >
-      main
+      HOME
     </motion.div>
   )
 }
