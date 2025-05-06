@@ -1,0 +1,2 @@
+"use strict";(self.webpackChunkstudy_books=self.webpackChunkstudy_books||[]).push([[453],{731:function(e,t,n){n.r(t),n.d(t,{Head:function(){return o}});var u=n(6540),l=n(4794);t.default=()=>u.createElement("main",null,u.createElement(l.Link,{to:"/"},"HOME"),".");const o=()=>u.createElement("title",null,"Not found")}}]);
+//# sourceMappingURL=component---src-pages-404-tsx-d4feba92f51892444586.js.map
