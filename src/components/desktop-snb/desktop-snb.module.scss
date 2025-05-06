@@ -1,0 +1,41 @@
+@use '../../styles/mixin';
+@use '../../styles/function' as fn;
+
+.desktop-snb {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  width: 100%;
+}
+
+.trigger {
+  @include mixin.padding(4px, 10px);
+  background: transparent;
+  width: 100%;
+  outline: none;
+  border: 0;
+  padding: 0;
+  font-size: fn.rem(16px);
+  text-align: left;
+
+  color: #71717B;
+
+  &:hover {
+    color: #FFF;
+  }
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  font-size: fn.rem(15px);
+
+  a {
+    @include mixin.padding(4px, 10px);
+    color: #71717B;
+
+    &:hover {
+      color: #FFF;
+    }
+  }
+}
