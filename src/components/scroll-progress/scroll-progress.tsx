@@ -15,10 +15,10 @@ type Props = {
 }
 
 const springOptions:SpringOptions = {
-  stiffness: 100,
-  damping: 30,
-  mass: 0.8,
-  velocity: 0.7,
+  stiffness: 80,
+  damping: 45,
+  mass: 1.5,
+  velocity: 0.2,
   bounce: 0
 };
 
