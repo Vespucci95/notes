@@ -2,6 +2,7 @@ import * as React from 'react'
 import { motion, SpringOptions, useScroll, useSpring, useTransform } from 'framer-motion';
 import { Animated } from '@/components/animated';
 import { HeadingInfo } from '@/__generated__/gatsby-types';
+import { Link } from 'gatsby';
 
 type Props = {
   toc: HeadingInfo[];
@@ -14,7 +15,7 @@ type Props = {
   gap?: number;
 }
 
-const springOptions:SpringOptions = {
+const springOptions: SpringOptions = {
   stiffness: 80,
   damping: 45,
   mass: 1.5,
@@ -69,20 +70,22 @@ const ScrollProgress = (
           flexDirection: 'column',
           justifyContent: 'center',
           alignItems: 'start',
-          gap: '6px'
+          gap: '8px'
         }}
       >
         {
           toc.map((section, index) => (
-            <Animated.ProgressBar
-              width={calcProgressWidth(section.contentLength, minLength, maxLength)}
-              height={strokeHeight}
-              percentage={useTransform(
-                scrollYSpring,
-                [index * progressPerSection, (index + 1) * progressPerSection],
-                [0, 100]
-              )}
-            />
+            <Link to={`#${section.id}`} key={section.id}>
+              <Animated.ProgressBar
+                width={calcProgressWidth(section.contentLength, minLength, maxLength)}
+                height={strokeHeight}
+                percentage={useTransform(
+                  scrollYSpring,
+                  [index * progressPerSection, (index + 1) * progressPerSection],
+                  [0, 100]
+                )}
+              />
+            </Link>
           ))
         }
       </div>
