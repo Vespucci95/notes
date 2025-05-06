@@ -4,6 +4,7 @@ import { PostQuery } from '@/__generated__/gatsby-types'
 import { DeepRequired } from '@/types';
 import PostHeader from '@/components/post-header/post-header';
 import { motion } from 'framer-motion';
+import ScrollProgress from '@/components/scroll-progress/scroll-progress';
 
 const MDX = ({ html }: { html: string }) => {
   return (
@@ -13,24 +14,27 @@ const MDX = ({ html }: { html: string }) => {
   )
 }
 
+
 const PostTemplate = ({ data }: { data: DeepRequired<PostQuery> }) => {
   return (
-    <motion.div
-      initial={{ y: 30, opacity: 0 }}
-      animate={{ y: 0, opacity: 1 }}
-      transition={{
-        duration: 0.3,
-        ease: "easeOut"
-      }}
-      style={{ width: '100%' }}
-    >
-      <PostHeader
-        title={data.markdownRemark.frontmatter.title}
-        category={data.markdownRemark.fields.category}
-        date={data.markdownRemark.frontmatter.date}
-      />
-      <MDX html={data.markdownRemark.html} />
-    </motion.div>
+    <>
+      <motion.div
+        initial={{ y: 30, opacity: 0 }}
+        animate={{ y: 0, opacity: 1 }}
+        transition={{ duration: 0.3, ease: "easeOut" }}
+        style={{ width: '100%' }}
+      >
+        <PostHeader
+          title={data.markdownRemark.frontmatter.title}
+          category={data.markdownRemark.fields.category}
+          date={data.markdownRemark.frontmatter.date}
+        />
+        <MDX html={data.markdownRemark.html} />
+      </motion.div>
+      <div className="side side-right">
+        <ScrollProgress toc={data.markdownRemark.enhancedHeadings} />
+      </div>
+    </>
   )
 }
 
@@ -47,6 +51,12 @@ export const query = graphql`
             }
             fields {
                 category
+            }
+            enhancedHeadings {
+                id
+                value
+                depth
+                contentLength
             }
         }
     }

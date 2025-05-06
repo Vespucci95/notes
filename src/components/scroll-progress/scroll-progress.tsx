@@ -96,12 +96,8 @@ const ScrollProgress = (
         }}
       >
         <Animated.ProgressCircle value={percentageSpring} />
-        <div
-          style={{ fontWeight: 'bold', color: '#FFF' }}
-        >
-          <div style={{ display: 'flex', fontSize: '0.8rem', width: '36px' }}>
-            <Animated.Number value={percentageSpring} />%
-          </div>
+        <div className="no-drag" style={{ display: 'flex', fontSize: '0.8rem', width: '36px', fontWeight: 'bold', color: '#FFF' }}>
+          <Animated.Number value={percentageSpring} />%
         </div>
       </motion.div>
     </div>

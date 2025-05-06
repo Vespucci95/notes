@@ -41,13 +41,8 @@ a {
 
 $max-width: 768px;
 $sidebar-width: 300px;
-$gap: 20px;
+$gap: 40px;
 $desktop-width: $max-width + $sidebar-width * 2 + $gap * 2;
-
-header {
-  max-width: $max-width;
-  margin: 0 auto;
-}
 
 footer {
   max-width: $max-width;
@@ -56,9 +51,9 @@ footer {
 
 .layout {
   display: flex;
+  flex-direction: column;
   min-height: 100vh;
   height: 100%;
-  overflow-y: hidden;
 
   main {
     display: flex;
@@ -68,7 +63,7 @@ footer {
     flex-direction: column;
     align-items: center;
     margin: 0 auto;
-    padding: 60px 0;
+    padding: 100px 0;
     box-sizing: border-box;
 
     @media (max-width: $max-width) {
@@ -80,26 +75,43 @@ footer {
     @include mixin.hide-scrollbar();
     display: flex;
     width: $sidebar-width;
-    max-height: 60vh;
+    height: 100%;
+    padding: 100px 0;
     position: fixed;
+    top: 50%;
+    transform: translateY(-50%);
     overflow-y: scroll;
 
     &-left {
-      top: 0;
       right: calc(50% + $max-width / 2 + $gap);
+      align-items: start;
+      justify-content: start;
     }
 
     &-right {
-      align-items: center;
-      justify-content: center;
+      align-items: start;
+      justify-content: start;
       left: calc(50% + $max-width / 2 + $gap);
-      top: 50%;
-      transform: translateY(-50%);
     }
 
     @media screen and (max-width: $desktop-width) {
       display: none;
     }
   }
+}
+
+.no-drag {
+  /* 텍스트 선택 방지 */
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+
+  /* 드래그 방지 */
+  -webkit-user-drag: none;
+  -khtml-user-drag: none;
+  -moz-user-drag: none;
+  -o-user-drag: none;
+  user-drag: none;
 }
 

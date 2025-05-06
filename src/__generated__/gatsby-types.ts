@@ -731,6 +731,14 @@ export enum GatsbyImagePlaceholder {
   TracedSvg = 'TRACED_SVG'
 }
 
+export type HeadingInfo = {
+  __typename?: 'HeadingInfo';
+  contentLength: Scalars['Int']['output'];
+  depth: Scalars['Int']['output'];
+  id: Scalars['String']['output'];
+  value: Scalars['String']['output'];
+};
+
 export enum ImageCropFocus {
   Attention = 'ATTENTION',
   Center = 'CENTER',
@@ -1307,6 +1315,7 @@ export type MarkdownHeadingSortInput = {
 export type MarkdownRemark = Node & {
   __typename?: 'MarkdownRemark';
   children: Array<Node>;
+  enhancedHeadings?: Maybe<Array<Maybe<HeadingInfo>>>;
   excerpt?: Maybe<Scalars['String']['output']>;
   excerptAst?: Maybe<Scalars['JSON']['output']>;
   fields?: Maybe<MarkdownRemarkFields>;
@@ -2948,4 +2957,4 @@ export type PostQueryVariables = Exact<{
 }>;
 
 
-export type PostQuery = { __typename?: 'Query', markdownRemark?: { __typename?: 'MarkdownRemark', id: string, html?: string | null, frontmatter?: { __typename?: 'MarkdownRemarkFrontmatter', title?: string | null, date?: any | null, categories?: string | null, description?: string | null } | null, fields?: { __typename?: 'MarkdownRemarkFields', category?: string | null } | null } | null };
+export type PostQuery = { __typename?: 'Query', markdownRemark?: { __typename?: 'MarkdownRemark', id: string, html?: string | null, frontmatter?: { __typename?: 'MarkdownRemarkFrontmatter', title?: string | null, date?: any | null, categories?: string | null, description?: string | null } | null, fields?: { __typename?: 'MarkdownRemarkFields', category?: string | null } | null, enhancedHeadings?: Array<{ __typename?: 'HeadingInfo', id: string, value: string, depth: number, contentLength: number } | null> | null } | null };
