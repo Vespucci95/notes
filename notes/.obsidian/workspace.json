@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "헤드 퍼스트 디자인 패턴 14가지 GoF 필살 패턴/strategy-pattern.md",
+                "file": "헤드 퍼스트 디자인 패턴 14가지 GoF 필살 패턴/adaptor-pattern-facade-pattern.md",
                 "mode": "source",
                 "source": false
               }
@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "헤드 퍼스트 디자인 패턴 14가지 GoF 필살 패턴/strategy-pattern.md",
+                "file": "헤드 퍼스트 디자인 패턴 14가지 GoF 필살 패턴/adaptor-pattern-facade-pattern.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "헤드 퍼스트 디자인 패턴 14가지 GoF 필살 패턴/strategy-pattern.md",
+                "file": "헤드 퍼스트 디자인 패턴 14가지 GoF 필살 패턴/adaptor-pattern-facade-pattern.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "헤드 퍼스트 디자인 패턴 14가지 GoF 필살 패턴/strategy-pattern.md"
+                "file": "헤드 퍼스트 디자인 패턴 14가지 GoF 필살 패턴/adaptor-pattern-facade-pattern.md"
               }
             }
           },
@@ -158,11 +158,19 @@
   },
   "active": "b926f8e3c7e26991",
   "lastOpenFiles": [
+    "헤드 퍼스트 디자인 패턴 14가지 GoF 필살 패턴/command-pattern.md",
+    "헤드 퍼스트 디자인 패턴 14가지 GoF 필살 패턴/adaptor-pattern-facade-pattern.md",
+    "헤드 퍼스트 디자인 패턴 14가지 GoF 필살 패턴/decorator-pattern.md",
+    "헤드 퍼스트 디자인 패턴 14가지 GoF 필살 패턴/singleton-pattern.md",
+    "헤드 퍼스트 디자인 패턴 14가지 GoF 필살 패턴/strategy-pattern.md",
+    "헤드 퍼스트 디자인 패턴 14가지 GoF 필살 패턴/factory-pattern.md",
+    "media/decorator-pattern-01.png",
+    "헤드 퍼스트 디자인 패턴 14가지 GoF 필살 패턴/observer-pattern.md",
+    "media/observer-pattern-01.png",
     "media/11.png",
     "posts/reactnative-masonry-list-improvement-review.md",
     "posts/what-is-lighthouse.md",
     "posts/docker-compose-dev-web-playground.md",
-    "헤드 퍼스트 디자인 패턴 14가지 GoF 필살 패턴/strategy-pattern.md",
     "2024/4.md",
     "2024/3.md",
     "2024/2.md",
@@ -174,9 +182,6 @@
     "media/img-2.jpg",
     "media/img-1.jpg",
     "media/cate-feed-03.png",
-    "media/cate-feed-02.gif",
-    "media/cate-feed-01.png",
-    "media/brick.png",
     "2024/react-native-1.md",
     "Pasted.md",
     "feed-gif-hd-01.md",
@@ -193,13 +198,10 @@
     "2024/03/1.md",
     "2024/03",
     "2024",
-    "tips/3.md",
     "tips/4.md~",
     "TypeScript",
-    "sub/TypeScript/1.md",
     "sub/TypeScript",
     "sub",
-    "main/TypeScript/1.md",
     "main/TypeScript",
     "main"
   ]
