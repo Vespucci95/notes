@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "헤드 퍼스트 디자인 패턴 14가지 GoF 필살 패턴/adaptor-pattern-facade-pattern.md",
+                "file": "헤드 퍼스트 디자인 패턴 14가지 GoF 필살 패턴/state-pattern.md",
                 "mode": "source",
                 "source": false
               }
@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "헤드 퍼스트 디자인 패턴 14가지 GoF 필살 패턴/adaptor-pattern-facade-pattern.md",
+                "file": "헤드 퍼스트 디자인 패턴 14가지 GoF 필살 패턴/state-pattern.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "헤드 퍼스트 디자인 패턴 14가지 GoF 필살 패턴/adaptor-pattern-facade-pattern.md",
+                "file": "헤드 퍼스트 디자인 패턴 14가지 GoF 필살 패턴/state-pattern.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "헤드 퍼스트 디자인 패턴 14가지 GoF 필살 패턴/adaptor-pattern-facade-pattern.md"
+                "file": "헤드 퍼스트 디자인 패턴 14가지 GoF 필살 패턴/state-pattern.md"
               }
             }
           },
@@ -158,8 +158,11 @@
   },
   "active": "b926f8e3c7e26991",
   "lastOpenFiles": [
-    "헤드 퍼스트 디자인 패턴 14가지 GoF 필살 패턴/command-pattern.md",
+    "헤드 퍼스트 디자인 패턴 14가지 GoF 필살 패턴/iterator-pattern-composite-pattern.md",
+    "헤드 퍼스트 디자인 패턴 14가지 GoF 필살 패턴/state-pattern.md",
+    "헤드 퍼스트 디자인 패턴 14가지 GoF 필살 패턴/template-method-pattern.md",
     "헤드 퍼스트 디자인 패턴 14가지 GoF 필살 패턴/adaptor-pattern-facade-pattern.md",
+    "헤드 퍼스트 디자인 패턴 14가지 GoF 필살 패턴/command-pattern.md",
     "헤드 퍼스트 디자인 패턴 14가지 GoF 필살 패턴/decorator-pattern.md",
     "헤드 퍼스트 디자인 패턴 14가지 GoF 필살 패턴/singleton-pattern.md",
     "헤드 퍼스트 디자인 패턴 14가지 GoF 필살 패턴/strategy-pattern.md",
@@ -192,10 +195,7 @@
     "TypeScript/1.md",
     "TypeScript/4.md",
     "TypeScript/3.md",
-    "TypeScript/2.md",
-    "tips/2.md",
     "2024",
-    "2024/03/1.md",
     "2024/03",
     "2024",
     "tips/4.md~",
