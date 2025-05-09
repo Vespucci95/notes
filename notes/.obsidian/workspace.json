@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "헤드 퍼스트 디자인 패턴 14가지 GoF 필살 패턴/blog-markdown.md",
+                "file": "헤드 퍼스트 디자인 패턴 14가지 GoF 필살 패턴/strategy-pattern.md",
                 "mode": "source",
                 "source": false
               }
@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "헤드 퍼스트 디자인 패턴 14가지 GoF 필살 패턴/blog-markdown.md",
+                "file": "헤드 퍼스트 디자인 패턴 14가지 GoF 필살 패턴/strategy-pattern.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "헤드 퍼스트 디자인 패턴 14가지 GoF 필살 패턴/blog-markdown.md",
+                "file": "헤드 퍼스트 디자인 패턴 14가지 GoF 필살 패턴/strategy-pattern.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "헤드 퍼스트 디자인 패턴 14가지 GoF 필살 패턴/blog-markdown.md"
+                "file": "헤드 퍼스트 디자인 패턴 14가지 GoF 필살 패턴/strategy-pattern.md"
               }
             }
           },
@@ -156,13 +156,13 @@
       "obsidian-excalidraw-plugin:Create new drawing": false
     }
   },
-  "active": "27226cab17a7e8e7",
+  "active": "b926f8e3c7e26991",
   "lastOpenFiles": [
     "media/11.png",
     "posts/reactnative-masonry-list-improvement-review.md",
     "posts/what-is-lighthouse.md",
     "posts/docker-compose-dev-web-playground.md",
-    "헤드 퍼스트 디자인 패턴 14가지 GoF 필살 패턴/blog-markdown.md",
+    "헤드 퍼스트 디자인 패턴 14가지 GoF 필살 패턴/strategy-pattern.md",
     "2024/4.md",
     "2024/3.md",
     "2024/2.md",

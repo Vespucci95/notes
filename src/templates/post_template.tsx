@@ -16,6 +16,7 @@ const PostTemplate = ({ data }: { data: DeepRequired<PostQuery> }) => {
         <Post.Header
           title={data.markdownRemark.frontmatter.title}
           category={data.markdownRemark.fields.category}
+          description={data.markdownRemark.frontmatter.description}
           date={data.markdownRemark.frontmatter.date}
         />
         <Post.Body html={data.markdownRemark.html} />

@@ -1,5 +1,5 @@
-@use '../../../styles/mixin';
-@use '../../../styles/function' as fn;
+@use 'mixin';
+@use 'function' as fn;
 
 @mixin markdown() {
   line-height: 1.6;
@@ -79,12 +79,12 @@
   }
 
   ul {
-    padding-left: 2rem;
+    padding-left: 1.2rem;
     list-style-type: '– ';
   }
 
   ol {
-    padding-left: 2rem;
+    padding-left: 1.2rem;
   }
 
   li {
@@ -154,10 +154,13 @@
   }
 
   blockquote {
+    margin-bottom: fn.rem(14px);
     border-left: 5px solid #384151;
     padding-left: 12px;
     font-style: italic;
+
     p {
+      margin: 0;
       color: #FFF;
       font-weight: 400;
     }
@@ -169,7 +172,7 @@
   }
 }
 
-.mdx {
+.markdown {
   @include markdown();
   display: flex;
   flex-direction: column;
@@ -210,7 +213,7 @@
 
   :not(pre) > code[class*="language-"],
   pre[class*="language-"] {
-    background: #292C33;
+    background: #282C34;
     border-radius: 12px;
   }
 
@@ -304,7 +307,7 @@
     padding: 0.15rem 0.5rem;
     font-size: 0.9rem
   }
-  
+
   &__content {
     width: 100%;
   }

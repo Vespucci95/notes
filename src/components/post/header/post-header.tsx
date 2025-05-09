@@ -6,6 +6,7 @@ import { useAppConfig } from '@/queries/app-config';
 type PostHeaderProps = {
   title: string;
   date: string;
+  description: string;
   category: string;
 }
 

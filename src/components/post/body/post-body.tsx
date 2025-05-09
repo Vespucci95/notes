@@ -1,5 +1,4 @@
 import * as React from 'react';
-import styles from './post-body.module.scss';
 
 interface MDXProps {
   html: string;
@@ -7,9 +6,7 @@ interface MDXProps {
 
 const PostBody: React.FC<MDXProps> = ({ html }) => {
   return (
-    <div className={styles['mdx']}>
-      <div className={styles['mdx__content']} dangerouslySetInnerHTML={{ __html: html }} />
-    </div>
+    <div className="markdown" dangerouslySetInnerHTML={{ __html: html }} />
   );
 };
 
