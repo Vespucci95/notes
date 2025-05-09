@@ -1,5 +1,5 @@
-@use '../styles/mixin';
-@use '../styles/function' as fn;
+@use '../../../styles/mixin';
+@use '../../../styles/function' as fn;
 
 @mixin markdown() {
   line-height: 1.6;
@@ -169,7 +169,7 @@
   }
 }
 
-.markdown {
+.mdx {
   @include markdown();
   display: flex;
   flex-direction: column;
@@ -295,13 +295,17 @@
   .token.inserted {
     color: #98B87B;
   }
-}
 
-main .markdown code[class*=language-text] {
-  color: #FFF;
-  background: #292C33;
-  font-weight: 300;
-  border-radius: 4px;
-  padding: 0.15rem 0.5rem;
-  font-size: 0.9rem
+  code[class*=language-text] {
+    color: #FFF;
+    background: #292C33;
+    font-weight: 300;
+    border-radius: 4px;
+    padding: 0.15rem 0.5rem;
+    font-size: 0.9rem
+  }
+  
+  &__content {
+    width: 100%;
+  }
 }

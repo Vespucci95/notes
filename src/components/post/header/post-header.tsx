@@ -14,10 +14,12 @@ const PostHeader = ({ title, category, date }: PostHeaderProps) => {
 
   return (
     <motion.div
-      className={styles.headerContainer}
+      className={styles['postHeader__container']}
     >
-      <h1>{title || site.siteMetadata.defaultPostTitle}</h1>
-      <div>
+      <h1 className={styles['postHeader__title']}>
+        {title || site.siteMetadata.defaultPostTitle}
+      </h1>
+      <div className={styles['postHeader__meta']}>
         <p>{category || site.siteMetadata.defaultCategoryName}</p>
         <p>{date}</p>
       </div>

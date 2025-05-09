@@ -1,0 +1,16 @@
+@use '../../styles/mixin';
+@use '../../styles/function' as fn;
+
+.layout {
+  &__container {
+    display: flex;
+    width: 100%;
+    min-height: 100vh;
+  }
+
+  &__main {
+    @include mixin.padding(80px, 20px);
+    flex: 1;
+    margin: 0 auto;
+  }
+}

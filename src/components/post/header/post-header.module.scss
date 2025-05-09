@@ -1,14 +1,16 @@
-@use '../../styles/mixin';
-@use '../../styles/function' as fn;
+@use '../../../styles/mixin';
+@use '../../../styles/function' as fn;
 
-.header-container {
-  @include mixin.flex(start, start) {
-    flex-direction: column;
-    gap: fn.rem(10px)
+.post-header {
+  &__container {
+    @include mixin.flex(start, start) {
+      flex-direction: column;
+      gap: fn.rem(10px)
+    }
+    margin-bottom: fn.rem(30px);
   }
-  margin-bottom: fn.rem(30px);
-
-  h1 {
+  
+  &__title {
     @include mixin.selection();
     font-size: fn.rem(32px);
     font-weight: 500;
@@ -16,7 +18,7 @@
     color: #CCC;
   }
 
-  div {
+  &__meta {
     @include mixin.selection(transparent);
     font-size: fn.rem(13px);
     @include mixin.flex(start, start) {

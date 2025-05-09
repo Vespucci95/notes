@@ -2,39 +2,28 @@ import * as React from "react"
 import { graphql } from 'gatsby';
 import { PostQuery } from '@/__generated__/gatsby-types'
 import { DeepRequired } from '@/types';
-import PostHeader from '@/components/post-header/post-header';
-import { motion } from 'framer-motion';
+
 import ScrollProgress from '@/components/scroll-progress/scroll-progress';
-
-const MDX = ({ html }: { html: string }) => {
-  return (
-    <div className="markdown">
-      <div dangerouslySetInnerHTML={{ __html: html }} />
-    </div>
-  )
-}
-
+import { Post } from '@/components/post';
+import styles from './post_template.module.scss';
 
 const PostTemplate = ({ data }: { data: DeepRequired<PostQuery> }) => {
   return (
-    <>
-      <motion.div
-        initial={{ y: 30, opacity: 0 }}
-        animate={{ y: 0, opacity: 1 }}
-        transition={{ duration: 0.3, ease: "easeOut" }}
-        style={{ width: '100%' }}
-      >
-        <PostHeader
+    <div className={styles['postTemplate']}>
+      <div className={styles['postTemplate__sideLeft']}>
+      </div>
+      <Post className={styles['postTemplate__content']}>
+        <Post.Header
           title={data.markdownRemark.frontmatter.title}
           category={data.markdownRemark.fields.category}
           date={data.markdownRemark.frontmatter.date}
         />
-        <MDX html={data.markdownRemark.html} />
-      </motion.div>
-      <div className="side side-right">
+        <Post.Body html={data.markdownRemark.html} />
+      </Post>
+      <div className={styles['postTemplate__sideRight']}>
         <ScrollProgress toc={data.markdownRemark.enhancedHeadings} />
       </div>
-    </>
+    </div>
   )
 }
 

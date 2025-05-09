@@ -1,0 +1,36 @@
+@use '../styles/variables';
+@use '../styles/mixin';
+@use '../styles/function' as fn;
+
+.post-template {
+  display: flex;
+  justify-content: center;
+  margin: 0 auto;
+  gap: 20px;
+
+  &__content {
+    width: 100%;
+    max-width: variables.$post-max-width;
+    flex-shrink: 0;
+  }
+
+  &__markdown {
+    width: 100%;
+  }
+
+  &__side-left,
+  &__side-right {
+    position: sticky;
+    top: 20px;
+    height: fit-content;
+    flex-basis: variables.$sidebar-width;
+    flex-shrink: 0;
+  }
+
+  @media (max-width: 1024px) {
+    &__side-left,
+    &__side-right {
+      display: none;
+    }
+  }
+}

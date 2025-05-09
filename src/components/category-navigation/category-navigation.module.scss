@@ -1,0 +1,44 @@
+@use '../../styles/mixin';
+@use '../../styles/function' as fn;
+
+.category-navigation {
+  &__container {
+    display: flex;
+    flex-direction: column;
+    gap: fn.rem(12px);
+    width: 100%;
+  }
+
+  &__trigger {
+    @include mixin.padding(4px, 10px);
+    background: transparent;
+    width: 100%;
+    outline: none;
+    border: 0;
+    padding: 0;
+    font-size: fn.rem(16px);
+    text-align: left;
+    color: #71717B;
+    cursor: pointer;
+
+    &:hover {
+      color: #FFF;
+    }
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    font-size: fn.rem(15px);
+  }
+
+  &__link {
+    @include mixin.padding(4px, 10px);
+    display: block;
+    color: #71717B;
+
+    &:hover {
+      color: #FFF;
+    }
+  }
+}

@@ -1,0 +1,10 @@
+@use '../../../styles/variables';
+@use '../../../styles/mixin';
+@use '../../../styles/function' as fn;
+
+.animated-container {
+  &__content {
+    width: 100%;
+    max-width: variables.$post-max-width;
+  }
+}
