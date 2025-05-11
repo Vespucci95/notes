@@ -3,7 +3,7 @@ import { AllCategoriesDataQuery } from '@/__generated__/gatsby-types'
 
 export const AllCategoriesQuery = graphql`
     query AllCategoriesData {
-        allMarkdownRemark {
+        allMarkdownRemark(sort: {frontmatter: {date: ASC}}) {
             group(field: {fields: {category: SELECT}}) {
                 fieldValue
                 totalCount
@@ -12,6 +12,7 @@ export const AllCategoriesQuery = graphql`
                         id
                         frontmatter {
                             title
+                            date
                         }
                         fields {
                             path

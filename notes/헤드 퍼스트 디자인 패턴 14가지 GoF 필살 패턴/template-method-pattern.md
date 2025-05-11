@@ -1,5 +1,5 @@
 ---
-date: 2025-05-10
+date: 2025-04-14
 title: CHAPTER 08 - 알고리즘 캡슐화하기 (템플릿 메소드 패턴)
 stage: sub
 categories: DesignPattern
