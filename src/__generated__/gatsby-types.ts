@@ -1475,7 +1475,6 @@ export type MarkdownRemarkFrontmatter = {
   date?: Maybe<Scalars['Date']['output']>;
   description?: Maybe<Scalars['String']['output']>;
   stage?: Maybe<Scalars['String']['output']>;
-  thumbnail?: Maybe<File>;
   title?: Maybe<Scalars['String']['output']>;
 };
 
@@ -1492,7 +1491,6 @@ export type MarkdownRemarkFrontmatterFieldSelector = {
   date?: InputMaybe<FieldSelectorEnum>;
   description?: InputMaybe<FieldSelectorEnum>;
   stage?: InputMaybe<FieldSelectorEnum>;
-  thumbnail?: InputMaybe<FileFieldSelector>;
   title?: InputMaybe<FieldSelectorEnum>;
 };
 
@@ -1501,7 +1499,6 @@ export type MarkdownRemarkFrontmatterFilterInput = {
   date?: InputMaybe<DateQueryOperatorInput>;
   description?: InputMaybe<StringQueryOperatorInput>;
   stage?: InputMaybe<StringQueryOperatorInput>;
-  thumbnail?: InputMaybe<FileFilterInput>;
   title?: InputMaybe<StringQueryOperatorInput>;
 };
 
@@ -1510,7 +1507,6 @@ export type MarkdownRemarkFrontmatterSortInput = {
   date?: InputMaybe<SortOrderEnum>;
   description?: InputMaybe<SortOrderEnum>;
   stage?: InputMaybe<SortOrderEnum>;
-  thumbnail?: InputMaybe<FileSortInput>;
   title?: InputMaybe<SortOrderEnum>;
 };
 
@@ -2950,7 +2946,7 @@ export type SiteMetadataConfigQuery = { __typename?: 'Query', site?: { __typenam
 export type AllCategoriesDataQueryVariables = Exact<{ [key: string]: never; }>;
 
 
-export type AllCategoriesDataQuery = { __typename?: 'Query', allMarkdownRemark: { __typename?: 'MarkdownRemarkConnection', group: Array<{ __typename?: 'MarkdownRemarkGroupConnection', fieldValue?: string | null, totalCount: number, edges: Array<{ __typename?: 'MarkdownRemarkEdge', node: { __typename?: 'MarkdownRemark', id: string, frontmatter?: { __typename?: 'MarkdownRemarkFrontmatter', title?: string | null } | null, fields?: { __typename?: 'MarkdownRemarkFields', path?: string | null } | null } }> }> } };
+export type AllCategoriesDataQuery = { __typename?: 'Query', allMarkdownRemark: { __typename?: 'MarkdownRemarkConnection', group: Array<{ __typename?: 'MarkdownRemarkGroupConnection', fieldValue?: string | null, totalCount: number, edges: Array<{ __typename?: 'MarkdownRemarkEdge', node: { __typename?: 'MarkdownRemark', id: string, frontmatter?: { __typename?: 'MarkdownRemarkFrontmatter', title?: string | null, date?: any | null } | null, fields?: { __typename?: 'MarkdownRemarkFields', path?: string | null } | null } }> }> } };
 
 export type PostQueryVariables = Exact<{
   path?: InputMaybe<Scalars['String']['input']>;

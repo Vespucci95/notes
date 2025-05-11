@@ -13,7 +13,9 @@
     "build": "gatsby build --prefix-paths",
     "serve": "gatsby serve",
     "clean": "gatsby clean",
-    "typecheck": "tsc --noEmit"
+    "codegen": "npx graphql-codegen",
+    "typecheck": "tsc --noEmit",
+    "prepare": "husky"
   },
   "dependencies": {
     "@fxts/core": "^1.9.0",
@@ -48,6 +50,7 @@
     "gatsby-plugin-sass": "^6.14.0",
     "gatsby-remark-autolink-headers": "^6.14.0",
     "gh-pages": "^6.3.0",
+    "husky": "^9.1.7",
     "sass": "^1.87.0",
     "tsconfig-paths-webpack-plugin": "^4.2.0",
     "typescript": "^5.3.3"
