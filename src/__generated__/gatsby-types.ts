@@ -2856,45 +2856,49 @@ export type SitePluginSortInput = {
 
 export type SiteSiteMetadata = {
   __typename?: 'SiteSiteMetadata';
+  author?: Maybe<Scalars['String']['output']>;
   categoryFieldName?: Maybe<Scalars['String']['output']>;
   defaultCategoryName?: Maybe<Scalars['String']['output']>;
   defaultPostTitle?: Maybe<Scalars['String']['output']>;
   description?: Maybe<Scalars['String']['output']>;
   obsidianNoteName?: Maybe<Scalars['String']['output']>;
-  postFieldName?: Maybe<Scalars['String']['output']>;
+  postTemplateBasePath?: Maybe<Scalars['String']['output']>;
   siteUrl?: Maybe<Scalars['String']['output']>;
   title?: Maybe<Scalars['String']['output']>;
 };
 
 export type SiteSiteMetadataFieldSelector = {
+  author?: InputMaybe<FieldSelectorEnum>;
   categoryFieldName?: InputMaybe<FieldSelectorEnum>;
   defaultCategoryName?: InputMaybe<FieldSelectorEnum>;
   defaultPostTitle?: InputMaybe<FieldSelectorEnum>;
   description?: InputMaybe<FieldSelectorEnum>;
   obsidianNoteName?: InputMaybe<FieldSelectorEnum>;
-  postFieldName?: InputMaybe<FieldSelectorEnum>;
+  postTemplateBasePath?: InputMaybe<FieldSelectorEnum>;
   siteUrl?: InputMaybe<FieldSelectorEnum>;
   title?: InputMaybe<FieldSelectorEnum>;
 };
 
 export type SiteSiteMetadataFilterInput = {
+  author?: InputMaybe<StringQueryOperatorInput>;
   categoryFieldName?: InputMaybe<StringQueryOperatorInput>;
   defaultCategoryName?: InputMaybe<StringQueryOperatorInput>;
   defaultPostTitle?: InputMaybe<StringQueryOperatorInput>;
   description?: InputMaybe<StringQueryOperatorInput>;
   obsidianNoteName?: InputMaybe<StringQueryOperatorInput>;
-  postFieldName?: InputMaybe<StringQueryOperatorInput>;
+  postTemplateBasePath?: InputMaybe<StringQueryOperatorInput>;
   siteUrl?: InputMaybe<StringQueryOperatorInput>;
   title?: InputMaybe<StringQueryOperatorInput>;
 };
 
 export type SiteSiteMetadataSortInput = {
+  author?: InputMaybe<SortOrderEnum>;
   categoryFieldName?: InputMaybe<SortOrderEnum>;
   defaultCategoryName?: InputMaybe<SortOrderEnum>;
   defaultPostTitle?: InputMaybe<SortOrderEnum>;
   description?: InputMaybe<SortOrderEnum>;
   obsidianNoteName?: InputMaybe<SortOrderEnum>;
-  postFieldName?: InputMaybe<SortOrderEnum>;
+  postTemplateBasePath?: InputMaybe<SortOrderEnum>;
   siteUrl?: InputMaybe<SortOrderEnum>;
   title?: InputMaybe<SortOrderEnum>;
 };
@@ -2942,10 +2946,15 @@ export type WebPOptions = {
   quality?: InputMaybe<Scalars['Int']['input']>;
 };
 
+export type MetaQueryQueryVariables = Exact<{ [key: string]: never; }>;
+
+
+export type MetaQueryQuery = { __typename?: 'Query', meta?: { __typename?: 'Site', siteMetadata?: { __typename?: 'SiteSiteMetadata', title?: string | null, description?: string | null, siteUrl?: string | null, author?: string | null } | null } | null };
+
 export type SiteMetadataConfigQueryVariables = Exact<{ [key: string]: never; }>;
 
 
-export type SiteMetadataConfigQuery = { __typename?: 'Query', site?: { __typename?: 'Site', siteMetadata?: { __typename?: 'SiteSiteMetadata', title?: string | null, categoryFieldName?: string | null, defaultCategoryName?: string | null, defaultPostTitle?: string | null, obsidianNoteName?: string | null } | null } | null };
+export type SiteMetadataConfigQuery = { __typename?: 'Query', site?: { __typename?: 'Site', siteMetadata?: { __typename?: 'SiteSiteMetadata', title?: string | null, author?: string | null, description?: string | null, siteUrl?: string | null, obsidianNoteName?: string | null, categoryFieldName?: string | null, postTemplateBasePath?: string | null, defaultCategoryName?: string | null, defaultPostTitle?: string | null } | null } | null };
 
 export type AllCategoriesDataQueryVariables = Exact<{ [key: string]: never; }>;
 

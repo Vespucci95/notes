@@ -2,6 +2,7 @@ import * as React from "react"
 import { HeadFC, PageProps } from "gatsby"
 import { Post } from '@/components/post';
 import CategoryNavigation from '@/components/category-navigation/category-navigation';
+import Seo from '@/components/seo/seo';
 
 const IndexPage: React.FC<PageProps> = ({ data }) => {
   return (
@@ -13,4 +14,4 @@ const IndexPage: React.FC<PageProps> = ({ data }) => {
 
 export default IndexPage
 
-export const Head: HeadFC = () => <title>note</title>
+export const Head: HeadFC = () => <Seo />

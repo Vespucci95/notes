@@ -1,11 +1,12 @@
 import * as React from "react"
-import { graphql } from 'gatsby';
+import { graphql, HeadFC } from 'gatsby';
 import { PostQuery } from '@/__generated__/gatsby-types'
 import { DeepRequired } from '@/types';
 
 import ScrollProgress from '@/components/scroll-progress/scroll-progress';
 import { Post } from '@/components/post';
 import styles from './post_template.module.scss';
+import Seo from '@/components/seo/seo';
 
 const PostTemplate = ({ data }: { data: DeepRequired<PostQuery> }) => {
   return (
@@ -51,5 +52,7 @@ export const query = graphql`
         }
     }
 `
+
+export const Head: HeadFC<DeepRequired<PostQuery>> = ({ data }) => <Seo title={data.markdownRemark.frontmatter.title} />
 
 export default PostTemplate

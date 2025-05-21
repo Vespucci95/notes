@@ -7,10 +7,14 @@ export const SiteMetadataQuery = graphql`
         site {
             siteMetadata {
                 title
+                author
+                description
+                siteUrl
+                obsidianNoteName
                 categoryFieldName
+                postTemplateBasePath
                 defaultCategoryName
                 defaultPostTitle
-                obsidianNoteName
             }
         }
     }

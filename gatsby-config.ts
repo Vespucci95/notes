@@ -7,8 +7,10 @@ const config: GatsbyConfig = {
      * 데이터 추가 시
      * src/queries/app-config.ts
      */
-    title: `study-books`,
-    siteUrl: `https://www.yourdomain.tld`,
+    title: `hyunseo`,
+    author: '이현서',
+    description: '메모장',
+    siteUrl: `https://vespucci95.github.io/notes`,
     obsidianNoteName: 'notes',
     categoryFieldName: 'category',
     postTemplateBasePath: 'post',
@@ -44,8 +46,8 @@ const config: GatsbyConfig = {
     {
       resolve: 'gatsby-plugin-manifest',
       options: {
-        "icon": "src/images/icon.png"
-      }
+        icon: 'src/images/icon_moon.png',
+      },
     },
     {
       resolve: 'gatsby-source-filesystem',
