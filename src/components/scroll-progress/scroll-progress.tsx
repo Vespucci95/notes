@@ -75,7 +75,7 @@ const ScrollProgress = (
         {
           toc.map((section, index) => (
             <Animated.ProgressBar
-              key={section.id}
+              key={`${section.id}-${index}`}
               width={calcProgressWidth(section.contentLength, minLength, maxLength)}
               height={strokeHeight}
               percentage={useTransform(
