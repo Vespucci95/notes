@@ -74,44 +74,7 @@
 <li>cost() 메서드를 호출한다. 이때 첨가물의 가격을 계산하는 일은 해당 객체에게 위임한다.</li>
 </ol>
 <h2 id="주문-시스템에-데코레이터-패턴-적용하기" style="position:relative;"><a href="#%EC%A3%BC%EB%AC%B8-%EC%8B%9C%EC%8A%A4%ED%85%9C%EC%97%90-%EB%8D%B0%EC%BD%94%EB%A0%88%EC%9D%B4%ED%84%B0-%ED%8C%A8%ED%84%B4-%EC%A0%81%EC%9A%A9%ED%95%98%EA%B8%B0" aria-label="주문 시스템에 데코레이터 패턴 적용하기 permalink" class="post-toc before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>주문 시스템에 데코레이터 패턴 적용하기</h2>
-<p><span
-      class="gatsby-resp-image-wrapper"
-      style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 768px; "
-    >
-      <span
-    class="gatsby-resp-image-background-image"
-    style="padding-bottom: 175%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAjCAIAAAAblL1PAAAACXBIWXMAAAsTAAALEwEAmpwYAAACSUlEQVR42qXW6XIaQQwE4H3/93OgiqqAgZgj5r7sAHG+bFfwGi/gFPqxpZ0dqXtaGkGxWCwmk8l0On1+fuZ4ffuyFW93WPG7Yt73+/12u91sNofD4f+Qj8fjfD5/fX2VAn/xnlYWpcl4LVjYy8vL09PTaDTiLJfLb6U1Gg3PyBGC9cjr9doTpkhOdlfPVYN8+rbb7YQBwaK673Pk3WqDQjVoq9UqyLPZjOacdWn5+ln/IiKJsfvkMILzN6Ul2NdrgqXI9uk24FZweXh4+F5aq9Xyyfq8NHK+B2OFoWdKDUe3ytXpdMbj8Y/SrGBh0TYUimqRdfhwOMRWqaUAAvnXP7MuI3Yp4QfagmW1W+LshiNLv9/HudvtttvtXq+HxbQ0WhTVDhEpceLB2sfXbejwB4OBXPE59hRnnYCYk8vq25fqnL4HkvJychlyisiLUbUR8/xb52jLOKmtFPAdOys+nUS62J42nZCV2vHEf+k+QwhODDLCj4+P/BvBkTrIiUxJlURv3Ai2D0lUpQhaGkYWwZdG0vt9pm16EwvBTutVbbXKNeTong6LYJ5i9BYutWOgRm37chOxVefU9vYwyHDkBBaFVDutkjPXzDDBJCGS4+Gp+z1dw7xyXAbkf5Z2Vvb7Zlj1Bb0IxtBGqnbinqudX4lMr5xWkUO+tqs/INvtuhPMRaWQ4zmndSn4N+a29GSjjX5uNpsI5+pLyrnYYWng9PCgtPjGBTS+SXKN9r40ImW+5+TYajLTK+P6ttpkE59/CYJhnv1inQX/AdWu9T1d0AlWAAAAAElFTkSuQmCC'); background-size: cover; display: block;"
-  ></span>
-  <picture>
-          <source
-              srcset="/notes/static/13d1bd44b1c580b934129a5d952ecbfe/a59e9/decorator-pattern-01.webp 192w,
-/notes/static/13d1bd44b1c580b934129a5d952ecbfe/0ca9f/decorator-pattern-01.webp 384w,
-/notes/static/13d1bd44b1c580b934129a5d952ecbfe/dc9b9/decorator-pattern-01.webp 768w,
-/notes/static/13d1bd44b1c580b934129a5d952ecbfe/e2c2f/decorator-pattern-01.webp 1152w,
-/notes/static/13d1bd44b1c580b934129a5d952ecbfe/18683/decorator-pattern-01.webp 1155w"
-              sizes="(max-width: 768px) 100vw, 768px"
-              type="image/webp"
-            />
-          <source
-            srcset="/notes/static/13d1bd44b1c580b934129a5d952ecbfe/3b721/decorator-pattern-01.png 192w,
-/notes/static/13d1bd44b1c580b934129a5d952ecbfe/66595/decorator-pattern-01.png 384w,
-/notes/static/13d1bd44b1c580b934129a5d952ecbfe/fe486/decorator-pattern-01.png 768w,
-/notes/static/13d1bd44b1c580b934129a5d952ecbfe/d2d74/decorator-pattern-01.png 1152w,
-/notes/static/13d1bd44b1c580b934129a5d952ecbfe/7b4c0/decorator-pattern-01.png 1155w"
-            sizes="(max-width: 768px) 100vw, 768px"
-            type="image/png"
-          />
-          <img
-            class="gatsby-resp-image-image"
-            src="/notes/static/13d1bd44b1c580b934129a5d952ecbfe/fe486/decorator-pattern-01.png"
-            alt="decorator-pattern-01.png"
-            title=""
-            loading="lazy"
-            decoding="async"
-            style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
-          />
-        </picture>
-    </span></p>
+<p><img src="../media/decorator-pattern-01.png" alt="decorator-pattern-01.png"></p>
 <p>내용 정리</p>
 <ul>
 <li>데코레이터의 슈퍼클래스는 자신이 장식하고 있는 객체의 슈퍼클래스와 같다.</li>
