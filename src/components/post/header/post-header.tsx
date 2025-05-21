@@ -1,7 +1,7 @@
 import * as React from 'react';
 import { motion } from 'framer-motion';
 import styles from './post-header.module.scss'
-import { useAppConfig } from '@/queries/app-config';
+import { useFetchAppConfig } from '@/queries/app-config';
 
 type PostHeaderProps = {
   title: string;
@@ -11,7 +11,7 @@ type PostHeaderProps = {
 }
 
 const PostHeader = ({ title, category, date }: PostHeaderProps) => {
-  const { site } = useAppConfig()
+  const { site } = useFetchAppConfig()
 
   return (
     <motion.div

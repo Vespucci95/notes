@@ -16,4 +16,4 @@ export const SiteMetadataQuery = graphql`
     }
 `;
 
-export const useAppConfig = (): DeepRequired<SiteMetadataConfigQuery> => useStaticQuery(SiteMetadataQuery);
+export const useFetchAppConfig = (): DeepRequired<SiteMetadataConfigQuery> => useStaticQuery(SiteMetadataQuery);

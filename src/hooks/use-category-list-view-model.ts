@@ -1,5 +1,5 @@
 import { useFetchAllCategoriesQuery } from '@/queries/categories';
-import { useAppConfig } from '@/queries/app-config';
+import { useFetchAppConfig } from '@/queries/app-config';
 import { useMemo } from 'react';
 
 export type Post = {
@@ -14,7 +14,7 @@ export type Category = {
 
 export const useCategoryListViewModel = (): Category[] => {
   const categories = useFetchAllCategoriesQuery();
-  const { site } = useAppConfig();
+  const { site } = useFetchAppConfig();
 
   return useMemo(() => categories.allMarkdownRemark.group.map((category) => (
       {

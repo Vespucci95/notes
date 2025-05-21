@@ -91,7 +91,7 @@ public measurementsChanged() {
 
 ## 옵저버 패턴의 작동 원리
 
-![옵저버_패턴_작동원리](../media/observer-pattern-01.png)
+![[observer-pattern-01.png]]
 
 ## 옵저버 패턴의 기본 구조
 

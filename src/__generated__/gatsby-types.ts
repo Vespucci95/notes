@@ -2861,6 +2861,7 @@ export type SiteSiteMetadata = {
   defaultPostTitle?: Maybe<Scalars['String']['output']>;
   description?: Maybe<Scalars['String']['output']>;
   obsidianNoteName?: Maybe<Scalars['String']['output']>;
+  postFieldName?: Maybe<Scalars['String']['output']>;
   siteUrl?: Maybe<Scalars['String']['output']>;
   title?: Maybe<Scalars['String']['output']>;
 };
@@ -2871,6 +2872,7 @@ export type SiteSiteMetadataFieldSelector = {
   defaultPostTitle?: InputMaybe<FieldSelectorEnum>;
   description?: InputMaybe<FieldSelectorEnum>;
   obsidianNoteName?: InputMaybe<FieldSelectorEnum>;
+  postFieldName?: InputMaybe<FieldSelectorEnum>;
   siteUrl?: InputMaybe<FieldSelectorEnum>;
   title?: InputMaybe<FieldSelectorEnum>;
 };
@@ -2881,6 +2883,7 @@ export type SiteSiteMetadataFilterInput = {
   defaultPostTitle?: InputMaybe<StringQueryOperatorInput>;
   description?: InputMaybe<StringQueryOperatorInput>;
   obsidianNoteName?: InputMaybe<StringQueryOperatorInput>;
+  postFieldName?: InputMaybe<StringQueryOperatorInput>;
   siteUrl?: InputMaybe<StringQueryOperatorInput>;
   title?: InputMaybe<StringQueryOperatorInput>;
 };
@@ -2891,6 +2894,7 @@ export type SiteSiteMetadataSortInput = {
   defaultPostTitle?: InputMaybe<SortOrderEnum>;
   description?: InputMaybe<SortOrderEnum>;
   obsidianNoteName?: InputMaybe<SortOrderEnum>;
+  postFieldName?: InputMaybe<SortOrderEnum>;
   siteUrl?: InputMaybe<SortOrderEnum>;
   title?: InputMaybe<SortOrderEnum>;
 };

@@ -11,6 +11,7 @@ const config: GatsbyConfig = {
     siteUrl: `https://www.yourdomain.tld`,
     obsidianNoteName: 'notes',
     categoryFieldName: 'category',
+    postTemplateBasePath: 'post',
     defaultCategoryName: '기본',
     defaultPostTitle: '제목 없음'
   },
@@ -47,9 +48,43 @@ const config: GatsbyConfig = {
       }
     },
     {
+      resolve: 'gatsby-source-filesystem',
+      options: {
+        "name": "images",
+        "path": "src/images/"
+      },
+      __key: "images"
+    },
+    {
+      resolve: 'gatsby-source-filesystem',
+      options: {
+        "name": "pages",
+        "path": "src/pages/"
+      },
+      __key: "pages"
+    },
+    {
+      resolve: 'gatsby-source-filesystem',
+      options: {
+        name: 'notes',
+        path: `${__dirname}/notes`,
+        ignore: [`**/.*`],
+      },
+    },
+    "gatsby-plugin-sharp",
+    "gatsby-transformer-sharp",
+    {
       resolve: "gatsby-transformer-remark",
       options: {
         plugins: [
+          {
+            resolve: `gatsby-remark-obsidian-syntax`,
+            options: {
+              toHashTagUrl: (value: number) => `/tags/${value}`,
+              toPageUrl: (value: number) => `/post/${value}`,
+              toImageUrl: (value: number) => `/AttachedFiles/${value}`
+            }
+          },
           {
             resolve: 'gatsby-remark-images',
             options: {
@@ -82,33 +117,7 @@ const config: GatsbyConfig = {
       options: {
         extensions: [`.mdx`, '.mdx'],
       },
-    },
-    "gatsby-plugin-sharp",
-    "gatsby-transformer-sharp",
-    {
-      resolve: 'gatsby-source-filesystem',
-      options: {
-        "name": "images",
-        "path": "./src/images/"
-      },
-      __key: "images"
-    },
-    {
-      resolve: 'gatsby-source-filesystem',
-      options: {
-        "name": "pages",
-        "path": "./src/pages/"
-      },
-      __key: "pages"
-    },
-    {
-      resolve: 'gatsby-source-filesystem',
-      options: {
-        name: 'notes',
-        path: `${__dirname}/notes`,
-        ignore: [`**/.*`],
-      },
-    },
+    }
   ]
 };
 

@@ -3,13 +3,50 @@ import TsconfigPathsPlugin from 'tsconfig-paths-webpack-plugin';
 import { createFilePath } from 'gatsby-source-filesystem';
 import { MarkdownRemark } from '@/__generated__/gatsby-types';
 
+type CreatePageQuery = {
+  allMarkdownRemark: {
+    edges: Array<{
+      node: {
+        fields: {
+          path: string
+        }
+        parent: {
+          name: string
+        }
+      }
+    }>
+  }
+}
+
+type HeadingInfo = {
+  id: string;
+  value: string;
+  depth: number;
+  contentLength: number;
+}
+
+type RawHeading = {
+  value: string;
+  depth: number;
+  lineIndex: number;
+};
+
+type HeadingSection = {
+  heading: RawHeading;
+  content: string[];
+};
+
 const createPostPathField = ({ node, getNode, actions, store }: CreateNodeArgs) => {
   const { createNodeField } = actions;
   const siteMetadata = store.getState().config.siteMetadata;
 
   if (node.internal.type === `MarkdownRemark`) {
-    const path = createFilePath({ node, getNode, basePath: siteMetadata.obsidianNoteName });
-    createNodeField({ node, name: 'path', value: path });
+    const [fileName] = createFilePath({
+      node,
+      getNode,
+      basePath: siteMetadata.obsidianNoteName
+    }).split('/').filter(Boolean).slice(-1);
+    createNodeField({ node, name: 'path', value: `/${siteMetadata.postTemplateBasePath}/${fileName}/` });
   }
 }
 
@@ -37,27 +74,23 @@ const createCategoryField = ({ node, getNode, actions, store, reporter }: Create
   }
 }
 
-type CreatePageQuery = {
-  allMarkdownRemark: {
-    edges: Array<{
-      node: {
-        fields: {
-          path: string
-        }
-      }
-    }>
-  }
-}
-
-export const createPages: GatsbyNode['createPages'] = async ({ actions, graphql, reporter }) => {
+export const createPages: GatsbyNode['createPages'] = async ({ actions, graphql, store, reporter }) => {
   const { createPage } = actions;
+  const siteMetadata = store.getState().config.siteMetadata;
+
   const result = await graphql<CreatePageQuery>(`
-      query CreatePage {
+      query CreatePages {
           allMarkdownRemark {
               edges {
                   node {
                       fields {
                           path
+                          category
+                      }
+                      parent {
+                          ... on File {
+                              name
+                          }
                       }
                   }
               }
@@ -72,30 +105,12 @@ export const createPages: GatsbyNode['createPages'] = async ({ actions, graphql,
 
   result.data.allMarkdownRemark.edges.forEach(({ node }) => {
     createPage({
-      path: node.fields.path,
+      path: `${siteMetadata.postTemplateBasePath}/${node.parent.name}`,
       component: `${__dirname}/src/templates/post_template.tsx`,
       context: {},
     })
   })
 }
-
-type HeadingInfo = {
-  id: string;
-  value: string;
-  depth: number;
-  contentLength: number;
-}
-
-type RawHeading = {
-  value: string;
-  depth: number;
-  lineIndex: number;
-};
-
-type HeadingSection = {
-  heading: RawHeading;
-  content: string[];
-};
 
 export const createSchemaCustomization: GatsbyNode['createSchemaCustomization'] = ({ actions }) => {
   const { createTypes } = actions;
