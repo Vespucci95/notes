@@ -1,2 +1,0 @@
-npm run codegen
-git add src/__generated__/gatsby-types.ts

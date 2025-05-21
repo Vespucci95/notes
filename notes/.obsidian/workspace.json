@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "헤드 퍼스트 디자인 패턴 14가지 GoF 필살 패턴/template-method-pattern.md",
+                "file": "헤드 퍼스트 디자인 패턴 14가지 GoF 필살 패턴/proxy-pattern.md",
                 "mode": "source",
                 "source": false
               }
@@ -48,7 +48,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "",
+                "query": "class State",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "헤드 퍼스트 디자인 패턴 14가지 GoF 필살 패턴/template-method-pattern.md",
+                "file": "헤드 퍼스트 디자인 패턴 14가지 GoF 필살 패턴/proxy-pattern.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "헤드 퍼스트 디자인 패턴 14가지 GoF 필살 패턴/template-method-pattern.md",
+                "file": "헤드 퍼스트 디자인 패턴 14가지 GoF 필살 패턴/proxy-pattern.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "헤드 퍼스트 디자인 패턴 14가지 GoF 필살 패턴/template-method-pattern.md"
+                "file": "헤드 퍼스트 디자인 패턴 14가지 GoF 필살 패턴/proxy-pattern.md"
               }
             }
           },
@@ -158,19 +158,37 @@
   },
   "active": "b926f8e3c7e26991",
   "lastOpenFiles": [
-    "헤드 퍼스트 디자인 패턴 14가지 GoF 필살 패턴/adaptor-pattern-facade-pattern.md",
-    "헤드 퍼스트 디자인 패턴 14가지 GoF 필살 패턴/template-method-pattern.md",
-    "헤드 퍼스트 디자인 패턴 14가지 GoF 필살 패턴/state-pattern.md",
-    "헤드 퍼스트 디자인 패턴 14가지 GoF 필살 패턴/iterator-pattern-composite-pattern.md",
-    "헤드 퍼스트 디자인 패턴 14가지 GoF 필살 패턴/command-pattern.md",
-    "헤드 퍼스트 디자인 패턴 14가지 GoF 필살 패턴/decorator-pattern.md",
     "헤드 퍼스트 디자인 패턴 14가지 GoF 필살 패턴/singleton-pattern.md",
-    "헤드 퍼스트 디자인 패턴 14가지 GoF 필살 패턴/strategy-pattern.md",
-    "헤드 퍼스트 디자인 패턴 14가지 GoF 필살 패턴/factory-pattern.md",
-    "media/decorator-pattern-01.png",
+    "헤드 퍼스트 디자인 패턴 14가지 GoF 필살 패턴/proxy-pattern.md",
     "헤드 퍼스트 디자인 패턴 14가지 GoF 필살 패턴/observer-pattern.md",
-    "media/observer-pattern-01.png",
-    "media/11.png",
+    "헤드 퍼스트 디자인 패턴 14가지 GoF 필살 패턴/iterator-pattern-composite-pattern.md",
+    "헤드 퍼스트 디자인 패턴 14가지 GoF 필살 패턴/factory-pattern.md",
+    "헤드 퍼스트 디자인 패턴 14가지 GoF 필살 패턴/decorator-pattern.md",
+    "헤드 퍼스트 디자인 패턴 14가지 GoF 필살 패턴/adaptor-pattern-facade-pattern.md",
+    "헤드 퍼스트 디자인 패턴 14가지 GoF 필살 패턴/strategy-pattern.md",
+    "헤드 퍼스트 디자인 패턴 14가지 GoF 필살 패턴/template-method-pattern.md",
+    "test/AttachedFiles/img-3.jpg",
+    "test/hello-test.md",
+    "test/AttachedFiles",
+    "test",
+    "test/무제 파일.md",
+    "test/무제 파일 1.md",
+    "헤드 퍼스트 디자인 패턴 14가지 GoF 필살 패턴/command-pattern.md",
+    "헤드 퍼스트 디자인 패턴 14가지 GoF 필살 패턴/state-pattern.md",
+    "test/AttachedFiles/Pasted image 20250517230644.png",
+    "test/AttachedFiles/example.png",
+    "test/AttachedFiles/observer-pattern-01.png",
+    "test/AttachedFiles/Pasted image 20250511211351.png",
+    "test/AttachedFiles/decorator-pattern-01.png",
+    "test/AttachedFiles/11.png",
+    "이미지 경로 테스트.md",
+    "헤드 퍼스트 디자인 패턴 14가지 GoF 필살 패턴/AttachedFiles/11.png",
+    "헤드 퍼스트 디자인 패턴 14가지 GoF 필살 패턴/AttachedFiles",
+    "AttachedFiles/Pasted image 20250517225448.png",
+    "AttachedFiles",
+    "헤드 퍼스트 디자인 패턴 14가지 GoF 필살 패턴/AttachedFiles/example.png",
+    "test/obsidian-test.md",
+    "[[strategy-pattern]].md",
     "posts/reactnative-masonry-list-improvement-review.md",
     "posts/what-is-lighthouse.md",
     "posts/docker-compose-dev-web-playground.md",
@@ -178,31 +196,13 @@
     "2024/3.md",
     "2024/2.md",
     "2024/1.md",
-    "media/docker-study-01.png",
-    "media/docker-study-02.png",
-    "media/nextjs-with-docker.png",
-    "media/Pasted image 20240401051015.png",
-    "media/img-2.jpg",
-    "media/img-1.jpg",
-    "media/cate-feed-03.png",
     "2024/react-native-1.md",
     "Pasted.md",
-    "feed-gif-hd-01.md",
-    "img-1.png.md",
     "2024/media",
-    "tips/4.md",
-    "tips/5.md",
-    "TypeScript/1.md",
-    "TypeScript/4.md",
-    "TypeScript/3.md",
     "2024",
     "2024/03",
     "2024",
     "tips/4.md~",
-    "TypeScript",
-    "sub/TypeScript",
-    "sub",
-    "main/TypeScript",
-    "main"
+    "TypeScript"
   ]
 }
