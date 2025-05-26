@@ -20,6 +20,30 @@
             }
           },
           {
+            "id": "852fcf902f7a1402",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "헤드 퍼스트 디자인 패턴 14가지 GoF 필살 패턴/strategy-pattern.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "cbd5c6882aba4d1e",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "헤드 퍼스트 디자인 패턴 14가지 GoF 필살 패턴/iterator-pattern-composite-pattern.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
             "id": "c74eac155b02ca3b",
             "type": "leaf",
             "state": {
@@ -89,8 +113,7 @@
               "state": {}
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "horizontal",
@@ -183,14 +206,14 @@
   },
   "active": "b926f8e3c7e26991",
   "lastOpenFiles": [
-    "헤드 퍼스트 디자인 패턴 14가지 GoF 필살 패턴/strategy-pattern.md",
-    "헤드 퍼스트 디자인 패턴 14가지 GoF 필살 패턴/compound-pattern.md",
     "헤드 퍼스트 디자인 패턴 14가지 GoF 필살 패턴/iterator-pattern-composite-pattern.md",
+    "헤드 퍼스트 디자인 패턴 14가지 GoF 필살 패턴/compound-pattern.md",
+    "헤드 퍼스트 디자인 패턴 14가지 GoF 필살 패턴/command-pattern.md",
+    "헤드 퍼스트 디자인 패턴 14가지 GoF 필살 패턴/strategy-pattern.md",
     "헤드 퍼스트 디자인 패턴 14가지 GoF 필살 패턴/observer-pattern.md",
     "헤드 퍼스트 디자인 패턴 14가지 GoF 필살 패턴/adaptor-pattern-facade-pattern.md",
     "헤드 퍼스트 디자인 패턴 14가지 GoF 필살 패턴/AttachedFiles/64884d3f6d9568a719a2cd71e06cb881.jpg",
     "헤드 퍼스트 디자인 패턴 14가지 GoF 필살 패턴/proxy-pattern.md",
-    "헤드 퍼스트 디자인 패턴 14가지 GoF 필살 패턴/command-pattern.md",
     "헤드 퍼스트 디자인 패턴 14가지 GoF 필살 패턴/singleton-pattern.md",
     "헤드 퍼스트 디자인 패턴 14가지 GoF 필살 패턴/factory-pattern.md",
     "헤드 퍼스트 디자인 패턴 14가지 GoF 필살 패턴/decorator-pattern.md",

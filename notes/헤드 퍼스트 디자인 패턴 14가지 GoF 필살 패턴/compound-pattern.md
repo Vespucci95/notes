@@ -55,3 +55,17 @@ thumbnail:
 - 뷰는 애플리케이션의 겉모습만 신경을 쓰고, 인터페이스의 모든 행동을 결정하는 일은 모두 컨트롤러에게 맡긴다.
 - 전략 패턴을 사용하여, 뷰를 모델로부터 분리한다.
 
+
+---
+
+
+## 모델-뷰-컨트롤러로 BPM 제어 도구 만들기
+
+책의 예제 중 일부 기능들을 Typescript로 학습해보았다.
+
+<iframe src="https://codesandbox.io/embed/n3rg7p?view=preview"
+     style="width:100%; height: 500px; border:0; border-radius: 4px; overflow:hidden;"
+     title="mvc-playground"
+     allow="accelerometer; ambient-light-sensor; camera; encrypted-media; geolocation; gyroscope; hid; microphone; midi; payment; usb; vr; xr-spatial-tracking"
+     sandbox="allow-forms allow-modals allow-popups allow-presentation allow-same-origin allow-scripts"
+   ></iframe>
