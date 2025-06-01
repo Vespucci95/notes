@@ -9,10 +9,12 @@ type CreatePageQuery = {
       node: {
         fields: {
           path: string
+          category: string
         }
         parent: {
           name: string
         }
+        tags: string[] // 태그 필드 추가
       }
     }>
   }
@@ -92,6 +94,7 @@ export const createPages: GatsbyNode['createPages'] = async ({ actions, graphql,
                               name
                           }
                       }
+                      tags
                   }
               }
           }
@@ -103,11 +106,29 @@ export const createPages: GatsbyNode['createPages'] = async ({ actions, graphql,
     return;
   }
 
+
+  const tags: string[] = [];
+
   result.data.allMarkdownRemark.edges.forEach(({ node }) => {
     createPage({
       path: `${siteMetadata.postTemplateBasePath}/${node.parent.name}`,
       component: `${__dirname}/src/templates/post_template.tsx`,
       context: {},
+    })
+    if (node.tags && node.tags.length > 0) {
+      tags.push(...node.tags)
+    }
+  })
+
+  new Set(tags).forEach(tag => {
+    const slug = tag.replace(/#/g, '')
+    createPage({
+      path: `/tags/${slug}`,
+      component: `${__dirname}/src/templates/tag_template.tsx`,
+      context: {
+        tagName: tag,
+        slug: slug,
+      }
     })
   })
 }
@@ -168,16 +189,29 @@ export const createResolvers: GatsbyNode['createResolvers'] = ({ createResolvers
       .length
   });
 
+  const extractTags = (content: string): string[] => {
+    const tagRegex = /(?:^|\s)(#(?![0-9]+(?:\s|$))[가-힣ㄱ-ㅎㅏ-ㅣa-zA-Z0-9_-]+)/g;
+
+    return [...new Set(
+      Array.from(content.matchAll(tagRegex), match => match[1])
+    )];
+  };
+
   createResolvers({
     MarkdownRemark: {
       enhancedHeadings: {
         type: '[HeadingInfo]',
         resolve: ({ rawMarkdownBody }: MarkdownRemark): HeadingInfo[] => {
           if (!rawMarkdownBody) return [];
-
           const lines = rawMarkdownBody.split('\n').filter(Boolean);
-
           return splitIntoSections(lines).map(createHeadingInfo);
+        }
+      },
+      tags: {
+        type: '[String]',
+        resolve: ({ rawMarkdownBody }: MarkdownRemark): string[] => {
+          if (!rawMarkdownBody) return [];
+          return extractTags(rawMarkdownBody);
         }
       }
     }

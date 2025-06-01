@@ -1329,6 +1329,7 @@ export type MarkdownRemark = Node & {
   parent?: Maybe<Node>;
   rawMarkdownBody?: Maybe<Scalars['String']['output']>;
   tableOfContents?: Maybe<Scalars['String']['output']>;
+  tags?: Maybe<Array<Maybe<Scalars['String']['output']>>>;
   timeToRead?: Maybe<Scalars['Int']['output']>;
   wordCount?: Maybe<MarkdownWordCount>;
 };
@@ -2967,3 +2968,8 @@ export type PostQueryVariables = Exact<{
 
 
 export type PostQuery = { __typename?: 'Query', markdownRemark?: { __typename?: 'MarkdownRemark', id: string, html?: string | null, frontmatter?: { __typename?: 'MarkdownRemarkFrontmatter', title?: string | null, date?: any | null, categories?: string | null, description?: string | null } | null, fields?: { __typename?: 'MarkdownRemarkFields', category?: string | null } | null, enhancedHeadings?: Array<{ __typename?: 'HeadingInfo', id: string, value: string, depth: number, contentLength: number } | null> | null } | null };
+
+export type TagPageQueryVariables = Exact<{ [key: string]: never; }>;
+
+
+export type TagPageQuery = { __typename?: 'Query', allMarkdownRemark: { __typename?: 'MarkdownRemarkConnection', edges: Array<{ __typename?: 'MarkdownRemarkEdge', node: { __typename?: 'MarkdownRemark', id: string, excerpt?: string | null, tags?: Array<string | null> | null, fields?: { __typename?: 'MarkdownRemarkFields', path?: string | null, category?: string | null } | null, frontmatter?: { __typename?: 'MarkdownRemarkFrontmatter', title?: string | null, date?: any | null } | null, parent?: { __typename?: 'Directory' } | { __typename?: 'File', name: string } | { __typename?: 'ImageSharp' } | { __typename?: 'MarkdownRemark' } | { __typename?: 'Mdx' } | { __typename?: 'Site' } | { __typename?: 'SiteBuildMetadata' } | { __typename?: 'SiteFunction' } | { __typename?: 'SitePage' } | { __typename?: 'SitePlugin' } | null } }> } };

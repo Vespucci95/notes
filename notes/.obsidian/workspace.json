@@ -13,7 +13,19 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "헤드 퍼스트 디자인 패턴 14가지 GoF 필살 패턴/compound-pattern.md",
+                "file": "헤드 퍼스트 디자인 패턴 14가지 GoF 필살 패턴/proxy-pattern.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "c49db2aaab897ca7",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "헤드 퍼스트 디자인 패턴 14가지 GoF 필살 패턴/real-world-patterns.md",
                 "mode": "source",
                 "source": false
               }
@@ -67,7 +79,8 @@
               }
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -133,7 +146,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "헤드 퍼스트 디자인 패턴 14가지 GoF 필살 패턴/compound-pattern.md",
+                "file": "헤드 퍼스트 디자인 패턴 14가지 GoF 필살 패턴/real-world-patterns.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -150,7 +163,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "헤드 퍼스트 디자인 패턴 14가지 GoF 필살 패턴/compound-pattern.md",
+                "file": "헤드 퍼스트 디자인 패턴 14가지 GoF 필살 패턴/real-world-patterns.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -173,7 +186,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "헤드 퍼스트 디자인 패턴 14가지 GoF 필살 패턴/compound-pattern.md"
+                "file": "헤드 퍼스트 디자인 패턴 14가지 GoF 필살 패턴/real-world-patterns.md"
               }
             }
           },
@@ -204,17 +217,19 @@
       "obsidian-excalidraw-plugin:Create new drawing": false
     }
   },
-  "active": "b926f8e3c7e26991",
+  "active": "c49db2aaab897ca7",
   "lastOpenFiles": [
+    "헤드 퍼스트 디자인 패턴 14가지 GoF 필살 패턴/proxy-pattern.md",
+    "헤드 퍼스트 디자인 패턴 14가지 GoF 필살 패턴/real-world-patterns.md",
+    "헤드 퍼스트 디자인 패턴 14가지 GoF 필살 패턴/compound-pattern.md",
+    "헤드 퍼스트 디자인 패턴 14가지 GoF 필살 패턴/tag-test.md",
     "헤드 퍼스트 디자인 패턴 14가지 GoF 필살 패턴/AttachedFiles/Pasted image 20250527172459.png",
     "헤드 퍼스트 디자인 패턴 14가지 GoF 필살 패턴/iterator-pattern-composite-pattern.md",
-    "헤드 퍼스트 디자인 패턴 14가지 GoF 필살 패턴/compound-pattern.md",
     "헤드 퍼스트 디자인 패턴 14가지 GoF 필살 패턴/command-pattern.md",
     "헤드 퍼스트 디자인 패턴 14가지 GoF 필살 패턴/strategy-pattern.md",
     "헤드 퍼스트 디자인 패턴 14가지 GoF 필살 패턴/observer-pattern.md",
     "헤드 퍼스트 디자인 패턴 14가지 GoF 필살 패턴/adaptor-pattern-facade-pattern.md",
     "헤드 퍼스트 디자인 패턴 14가지 GoF 필살 패턴/AttachedFiles/64884d3f6d9568a719a2cd71e06cb881.jpg",
-    "헤드 퍼스트 디자인 패턴 14가지 GoF 필살 패턴/proxy-pattern.md",
     "헤드 퍼스트 디자인 패턴 14가지 GoF 필살 패턴/singleton-pattern.md",
     "헤드 퍼스트 디자인 패턴 14가지 GoF 필살 패턴/factory-pattern.md",
     "헤드 퍼스트 디자인 패턴 14가지 GoF 필살 패턴/decorator-pattern.md",
@@ -235,7 +250,6 @@
     "이미지 경로 테스트.md",
     "헤드 퍼스트 디자인 패턴 14가지 GoF 필살 패턴/AttachedFiles/11.png",
     "헤드 퍼스트 디자인 패턴 14가지 GoF 필살 패턴/AttachedFiles",
-    "AttachedFiles/Pasted image 20250517225448.png",
     "AttachedFiles",
     "test/obsidian-test.md",
     "[[strategy-pattern]].md",
@@ -245,7 +259,6 @@
     "2024/4.md",
     "2024/3.md",
     "2024/2.md",
-    "2024/1.md",
     "2024/media",
     "2024",
     "2024/03",
