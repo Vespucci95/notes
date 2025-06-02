@@ -1,3 +1,4 @@
+@use '../../../styles/variables';
 @use '../../../styles/mixin';
 @use '../../../styles/function' as fn;
 
@@ -15,7 +16,7 @@
     font-size: fn.rem(32px);
     font-weight: 500;
     line-height: 1.14;
-    color: #CCC;
+    color: variables.$white;
   }
 
   &__meta {
@@ -25,6 +26,6 @@
       gap: fn.rem(14px);
     }
     width: 100%;
-    color: #71717B;
+    color: variables.$gray-300;
   }
 }

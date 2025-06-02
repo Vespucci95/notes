@@ -13,19 +13,24 @@ const CategoryNavigation = () => {
         {
           categoryList.map(({ categoryName, posts }) => (
             <Accordion.Item value={categoryName} key={categoryName}>
-              <Accordion.Trigger className={styles['categoryNavigation__trigger']}>{categoryName}</Accordion.Trigger>
-              <Accordion.Content className={styles['categoryNavigation__content']}>
+              <Accordion.Trigger className={styles['categoryNavigation__trigger']}>
+                <div className={styles['arrow']}></div>
+                {categoryName}
+              </Accordion.Trigger>
+              <Accordion.Content asChild className={styles['categoryNavigation__content']}>
+                <ul>
                 {
                   posts.map(({ title, path }) => (
-                    <Link 
-                      key={`${categoryName}-${title}}`} 
-                      to={path} 
+                    <Link
+                      key={`${categoryName}-${title}}-${path}`}
+                      to={path}
                       className={styles['categoryNavigation__link']}
                     >
-                      {title}
+                      <li>{title}</li>
                     </Link>
                   ))
                 }
+                </ul>
               </Accordion.Content>
             </Accordion.Item>
           ))

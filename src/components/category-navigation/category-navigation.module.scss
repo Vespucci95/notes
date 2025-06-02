@@ -1,5 +1,20 @@
+@use '../../styles/variables';
 @use '../../styles/mixin';
 @use '../../styles/function' as fn;
+
+$duration: 0.2s;
+
+.arrow {
+  width: 8px;
+  height: 8px;
+  border-right: 1px solid variables.$gray-300;
+  border-bottom: 1px solid variables.$gray-300;
+  position: absolute;
+  top: 8px;
+  left: 8px;
+  transform: rotate(-45deg);
+  transition: all $duration;
+}
 
 .category-navigation {
   &__container {
@@ -10,19 +25,23 @@
   }
 
   &__trigger {
-    @include mixin.padding(4px, 10px);
-    background: transparent;
+    display: flex;
     width: 100%;
-    outline: none;
+    position: relative;
     border: 0;
-    padding: 0;
     font-size: fn.rem(16px);
+    font-weight: 600;
     text-align: left;
-    color: #71717B;
+    color: variables.$gray-300;
+    outline: none;
+    background: transparent;
     cursor: pointer;
 
-    &:hover {
-      color: #FFF;
+    &[data-state="open"] {
+      color: variables.$white;
+      .arrow {
+        transform: rotate(45deg);
+      }
     }
   }
 
@@ -30,15 +49,59 @@
     display: flex;
     flex-direction: column;
     font-size: fn.rem(15px);
+    gap: fn.rem(4px);
+    overflow-y: hidden;
+    position: relative;
+
+    &[data-state="open"] {
+      animation: slideDown $duration ease-out;
+    }
+
+    &[data-state="closed"] {
+      animation: slideUp $duration ease-out;
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      width: 0.2px;
+      height: 100%;
+      background: variables.$gray-300;
+      left: 12px;
+    }
   }
 
   &__link {
-    @include mixin.padding(4px, 10px);
     display: block;
-    color: #71717B;
+    color: variables.$gray-300;
+  }
+
+  &__trigger,
+  &__link {
+    @include mixin.padding(4px, 30px);
+    border-radius: 8px;
 
     &:hover {
       color: #FFF;
+      background: #202020;
     }
+  }
+}
+
+@keyframes slideDown {
+  from {
+    height: 0;
+  }
+  to {
+    height: var(--radix-accordion-content-height);
+  }
+}
+
+@keyframes slideUp {
+  from {
+    height: var(--radix-accordion-content-height);
+  }
+  to {
+    height: 0;
   }
 }

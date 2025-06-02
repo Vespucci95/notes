@@ -1,0 +1,13 @@
+@use '../styles/variables';
+@use '../styles/mixin';
+@use '../styles/function' as fn;
+
+.tag-template {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 0 auto;
+  width: 100%;
+  max-width: variables.$post-max-width;
+  flex-shrink: 0;
+}
