@@ -144,6 +144,11 @@ export const createSchemaCustomization: GatsbyNode['createSchemaCustomization'] 
       contentLength: Int!
     }
   `);
+  createTypes(`
+    type MarkdownRemark implements Node {
+      tags: [String]
+    }
+  `);
 };
 
 export const createResolvers: GatsbyNode['createResolvers'] = ({ createResolvers }) => {
