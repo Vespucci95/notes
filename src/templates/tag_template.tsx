@@ -1,8 +1,10 @@
 import React from 'react';
-import { graphql, Link, PageProps } from 'gatsby';
+import { graphql, PageProps } from 'gatsby';
 import { TagPageQuery } from '@/__generated__/gatsby-types';
 import styles from './tag_template.module.scss';
 import { DeepRequired } from '@/types';
+import Category from '@/components/category/category';
+import { CategoryModel } from '@/hooks/use-category-list-view-model';
 
 type TagPageContext = {
   tagName: string;
@@ -10,16 +12,16 @@ type TagPageContext = {
 }
 
 const TagTemplate: React.FC<PageProps<DeepRequired<TagPageQuery>, TagPageContext>> = ({ data }, context) => {
+  const categoryData:CategoryModel[] = data.allMarkdownRemark.group.map(({ fieldValue, edges }) => ({
+    categoryName: fieldValue,
+    posts: edges.map(({ node }) => ({
+      title: node.frontmatter.title,
+      path: node.fields.path
+    }))
+  }));
   return (
     <div className={styles['tagTemplate']}>
-      {
-        data.allMarkdownRemark.edges.map((edge) => (
-          <Link to={edge.node.fields.path} key={edge.node.id} >
-            <h1>{edge.node.frontmatter.title}</h1>
-            <p>{edge.node.frontmatter.date}</p>
-          </Link>
-        ))
-      }
+      <Category data={categoryData} />
     </div>
   );
 };
@@ -32,24 +34,20 @@ export const query = graphql`
             sort: {frontmatter: {date: DESC}}
             filter: {tags: {eq: $tagName}}
         ) {
-            edges {
-                node {
-                    id
-                    fields {
-                        path
-                        category
-                    }
-                    frontmatter {
-                        title
-                        date(formatString: "YYYY년 MM월 DD일")
-                    }
-                    excerpt(pruneLength: 200)
-                    parent {
-                        ... on File {
-                            name
+            group(field: {fields: {category: SELECT}}) {
+                fieldValue
+                totalCount
+                edges {
+                    node {
+                        id
+                        frontmatter {
+                            title
+                            date
+                        }
+                        fields {
+                            path
                         }
                     }
-                    tags
                 }
             }
         }

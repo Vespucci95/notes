@@ -3,20 +3,25 @@
 @use '../../styles/function' as fn;
 
 $duration: 0.2s;
+$arrow-size: 8px;
 
 .arrow {
-  width: 8px;
-  height: 8px;
+  width: $arrow-size;
+  height: $arrow-size;
   border-right: 1px solid variables.$gray-300;
   border-bottom: 1px solid variables.$gray-300;
   position: absolute;
-  top: 8px;
-  left: 8px;
-  transform: rotate(-45deg);
+  top: 50%;
+  left: $arrow-size;
+  transform: translateY(-50%) rotate(-45deg);
   transition: all $duration;
 }
 
-.category-navigation {
+.category {
+  p {
+    margin: 0;
+    padding: 0;
+  }
   &__container {
     display: flex;
     flex-direction: column;
@@ -40,7 +45,7 @@ $duration: 0.2s;
     &[data-state="open"] {
       color: variables.$white;
       .arrow {
-        transform: rotate(45deg);
+        transform: translateY(-50%) rotate(45deg);
       }
     }
   }
@@ -64,7 +69,7 @@ $duration: 0.2s;
     &::after {
       content: "";
       position: absolute;
-      width: 0.2px;
+      width: 0.5px;
       height: 100%;
       background: variables.$gray-300;
       left: 12px;

@@ -1422,6 +1422,7 @@ export type MarkdownRemarkFieldSelector = {
   parent?: InputMaybe<NodeFieldSelector>;
   rawMarkdownBody?: InputMaybe<FieldSelectorEnum>;
   tableOfContents?: InputMaybe<FieldSelectorEnum>;
+  tags?: InputMaybe<FieldSelectorEnum>;
   timeToRead?: InputMaybe<FieldSelectorEnum>;
   wordCount?: InputMaybe<MarkdownWordCountFieldSelector>;
 };
@@ -1462,6 +1463,7 @@ export type MarkdownRemarkFilterInput = {
   parent?: InputMaybe<NodeFilterInput>;
   rawMarkdownBody?: InputMaybe<StringQueryOperatorInput>;
   tableOfContents?: InputMaybe<StringQueryOperatorInput>;
+  tags?: InputMaybe<StringQueryOperatorInput>;
   timeToRead?: InputMaybe<IntQueryOperatorInput>;
   wordCount?: InputMaybe<MarkdownWordCountFilterInput>;
 };
@@ -1568,6 +1570,7 @@ export type MarkdownRemarkSortInput = {
   parent?: InputMaybe<NodeSortInput>;
   rawMarkdownBody?: InputMaybe<SortOrderEnum>;
   tableOfContents?: InputMaybe<SortOrderEnum>;
+  tags?: InputMaybe<SortOrderEnum>;
   timeToRead?: InputMaybe<SortOrderEnum>;
   wordCount?: InputMaybe<MarkdownWordCountSortInput>;
 };
@@ -2021,6 +2024,7 @@ export type QueryMarkdownRemarkArgs = {
   parent?: InputMaybe<NodeFilterInput>;
   rawMarkdownBody?: InputMaybe<StringQueryOperatorInput>;
   tableOfContents?: InputMaybe<StringQueryOperatorInput>;
+  tags?: InputMaybe<StringQueryOperatorInput>;
   timeToRead?: InputMaybe<IntQueryOperatorInput>;
   wordCount?: InputMaybe<MarkdownWordCountFilterInput>;
 };
@@ -2969,7 +2973,9 @@ export type PostQueryVariables = Exact<{
 
 export type PostQuery = { __typename?: 'Query', markdownRemark?: { __typename?: 'MarkdownRemark', id: string, html?: string | null, frontmatter?: { __typename?: 'MarkdownRemarkFrontmatter', title?: string | null, date?: any | null, categories?: string | null, description?: string | null } | null, fields?: { __typename?: 'MarkdownRemarkFields', category?: string | null } | null, enhancedHeadings?: Array<{ __typename?: 'HeadingInfo', id: string, value: string, depth: number, contentLength: number } | null> | null } | null };
 
-export type TagPageQueryVariables = Exact<{ [key: string]: never; }>;
+export type TagPageQueryVariables = Exact<{
+  tagName?: InputMaybe<Scalars['String']['input']>;
+}>;
 
 
-export type TagPageQuery = { __typename?: 'Query', allMarkdownRemark: { __typename?: 'MarkdownRemarkConnection', edges: Array<{ __typename?: 'MarkdownRemarkEdge', node: { __typename?: 'MarkdownRemark', id: string, excerpt?: string | null, tags?: Array<string | null> | null, fields?: { __typename?: 'MarkdownRemarkFields', path?: string | null, category?: string | null } | null, frontmatter?: { __typename?: 'MarkdownRemarkFrontmatter', title?: string | null, date?: any | null } | null, parent?: { __typename?: 'Directory' } | { __typename?: 'File', name: string } | { __typename?: 'ImageSharp' } | { __typename?: 'MarkdownRemark' } | { __typename?: 'Mdx' } | { __typename?: 'Site' } | { __typename?: 'SiteBuildMetadata' } | { __typename?: 'SiteFunction' } | { __typename?: 'SitePage' } | { __typename?: 'SitePlugin' } | null } }> } };
+export type TagPageQuery = { __typename?: 'Query', allMarkdownRemark: { __typename?: 'MarkdownRemarkConnection', group: Array<{ __typename?: 'MarkdownRemarkGroupConnection', fieldValue?: string | null, totalCount: number, edges: Array<{ __typename?: 'MarkdownRemarkEdge', node: { __typename?: 'MarkdownRemark', id: string, frontmatter?: { __typename?: 'MarkdownRemarkFrontmatter', title?: string | null, date?: any | null } | null, fields?: { __typename?: 'MarkdownRemarkFields', path?: string | null } | null } }> }> } };

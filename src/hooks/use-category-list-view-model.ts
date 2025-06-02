@@ -7,12 +7,12 @@ export type Post = {
   path: string;
 }
 
-export type Category = {
+export type CategoryModel = {
   categoryName: string;
   posts: Post[]
 }
 
-export const useCategoryListViewModel = (): Category[] => {
+export const useCategoryListViewModel = (): CategoryModel[] => {
   const categories = useFetchAllCategoriesQuery();
   const { site } = useFetchAppConfig();
 
