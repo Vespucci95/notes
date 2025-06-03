@@ -5,7 +5,7 @@ import styles from './post-container.module.scss'
 
 const PostContainer = ({ children, className, ...props }: FadeInUpProps) => {
   return (
-    <Animated.FadeInUp className={styles.container} {...props} >
+    <Animated.FadeInUp className={`${styles.container} ${className}`} {...props} >
       {children}
     </Animated.FadeInUp>
   );

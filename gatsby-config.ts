@@ -1,7 +1,10 @@
 import type { GatsbyConfig } from "gatsby";
 
+const isDevelopment = process.env.NODE_ENV === 'development';
+const pathPrefix = isDevelopment ? '' : '/notes';
+
 const config: GatsbyConfig = {
-  pathPrefix: '/notes',
+  pathPrefix,
   siteMetadata: {
     /**
      * 데이터 추가 시
@@ -82,9 +85,9 @@ const config: GatsbyConfig = {
           {
             resolve: `gatsby-remark-obsidian-syntax`,
             options: {
-              toHashTagUrl: (value: string) => `/tags/${value.replace(/#/g, '')}`,
-              toPageUrl: (value: string) => `/post/${value}`,
-              toImageUrl: (value: string) => `/AttachedFiles/${value}`
+              toHashTagUrl: (value: string) => `${isDevelopment}/tags/${value.replace(/#/g, '')}`,
+              toPageUrl: (value: string) => `${isDevelopment}/post/${value}`,
+              toImageUrl: (value: string) => `${isDevelopment}/AttachedFiles/${value}`
             }
           },
           {
