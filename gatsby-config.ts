@@ -87,7 +87,7 @@ const config: GatsbyConfig = {
             options: {
               toHashTagUrl: (value: string) => `${pathPrefix}/tags/${value.replace(/#/g, '')}`,
               toPageUrl: (value: string) => `${pathPrefix}/post/${value}`,
-              toImageUrl: (value: string) => `${pathPrefix}/AttachedFiles/${value}`
+              toImageUrl: (value: string) => `/AttachedFiles/${value}`
             }
           },
           {
