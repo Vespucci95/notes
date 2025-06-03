@@ -49,7 +49,7 @@
         }
       }
     })
-  </script><title data-gatsby-head="true">CHAPTER 12 - 패턴을 모아 패턴 만들기 (복합 패턴)</title></head><body><div id="___gatsby"><div style="outline:none" tabindex="-1" id="gatsby-focus-wrapper"><div class="layout-module--layout__container--d9cec"><main class="layout-module--layout__main--d2e4a"><div class="post_template-module--post-template--9abe0"><div class="post_template-module--post-template__side-left--5cd36"></div><div class="post-container-module--container--56f0d" style="opacity:0;transform:translateY(30px)"><div class="post-header-module--post-header__container--17ea9"><h1 class="post-header-module--post-header__title--8af55">CHAPTER 12 - 패턴을 모아 패턴 만들기 (복합 패턴)</h1><div class="post-header-module--post-header__meta--0e52a"><p>헤드 퍼스트 디자인 패턴 14가지 GoF 필살 패턴</p><p>2025.05.22</p></div></div><div class="markdown"><h2 id="복합-패턴" style="position:relative;"><a href="#%EB%B3%B5%ED%95%A9-%ED%8C%A8%ED%84%B4" aria-label="복합 패턴 permalink" class="post-toc before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>복합 패턴</h2>
+  </script><title data-gatsby-head="true">CHAPTER 12 - 패턴을 모아 패턴 만들기 (복합 패턴)</title></head><body><div id="___gatsby"><div style="outline:none" tabindex="-1" id="gatsby-focus-wrapper"><div class="layout-module--layout__container--d9cec"><main class="layout-module--layout__main--d2e4a"><div class="post_template-module--post-template--9abe0"><div class="post_template-module--post-template__side-left--5cd36"></div><div class="post-container-module--container--56f0d post_template-module--post-template__content--d357d" style="opacity:0;transform:translateY(30px)"><div class="post-header-module--post-header__container--17ea9"><h1 class="post-header-module--post-header__title--8af55">CHAPTER 12 - 패턴을 모아 패턴 만들기 (복합 패턴)</h1><div class="post-header-module--post-header__meta--0e52a"><p>헤드 퍼스트 디자인 패턴 14가지 GoF 필살 패턴</p><p>2025.05.22</p></div></div><div class="markdown"><h2 id="복합-패턴" style="position:relative;"><a href="#%EB%B3%B5%ED%95%A9-%ED%8C%A8%ED%84%B4" aria-label="복합 패턴 permalink" class="post-toc before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>복합 패턴</h2>
 <blockquote>
 <p>복합 패턴은 여러 패턴을 함께 사용해서 다양한 디자인 문제를 해결하는 방법을 말한다.
 반복적으로 생길 수 있는 일반적인 문제를 해결하는 용도로 쓰이며, 2개 이상의 패턴을 결합해서 사용하는 것을 뜻한다.</p>
@@ -57,7 +57,7 @@
 <p>단, 패턴 몇 개를 결합한다고 해서 무조건 복합 패턴은 되는 것은 아니다.
 복합 패턴이라 불리기위해서는 여러 가지 문제의 일반적인 해결법을 제시해야 한다</p>
 <p>책에서는 복합패턴을 설명하기위해 MVC에 대해 이야기한다.</p>
-<p>모델-뷰-컨트롤러( Model-View-Controller,<a class="obsidian-tag" href="/tags/MVC">#MVC</a> )는 여러 패턴을 합쳐놓은 복합 패턴의 대표적인 예이다.</p>
+<p>모델-뷰-컨트롤러( Model-View-Controller,<a class="obsidian-tag" href="false/tags/MVC">#MVC</a> )는 여러 패턴을 합쳐놓은 복합 패턴의 대표적인 예이다.</p>
 <p>재미있는 부분은 MVC에 대한 노래(<a href="http://hayne.net/HCI/MVC/mvc_song.html">MVC Song - James Dempsey</a>)에 대한 내용도 책에 수록되어 있다.</p>
 <iframe src="https://www.youtube.com/embed/YYvOGPMLVDo" title="MVC Song"
 style="width:100%; height: 500px; border:0; border-radius: 4px; overflow:hidden;" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
@@ -67,34 +67,23 @@ style="width:100%; height: 500px; border:0; border-radius: 4px; overflow:hidden;
 <p>Model, View, Controller를 각각 독립적인 계층으로 나누어 각각 다른 책임을 갖도록 하는 패턴</p>
 </blockquote>
 <p>모델-뷰-컨트롤러 간 흐름은 다음과 같다.</p>
-<p><span class="gatsby-resp-image-wrapper" style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 751px; ">
-      <span class="gatsby-resp-image-background-image" style="padding-bottom: 76.04166666666667%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAPCAYAAADkmO9VAAAACXBIWXMAAAsTAAALEwEAmpwYAAACIElEQVR42m1Uia7aMBDka/tN/Yf2K1q9Sq+V+lRxH+WGJMSEEEJuM501cQooliybjXc8O7Omg5Zxu93MqpTCZDJBnucoy7KJyyiK4um3HZ22oI35/gG9Xg+z2QzL5RL64ex8PjcXns9nRFHU5HTQTtEscRzDcxx4rmvWLMuaI5v1GuPx2ABLFafT6Q6YJElTjr3F8giKEg7LrRi/VpVZ7djtdgQaYzQaGfYiiwH0fR+LxQKbzQaHwwFa6yYp4f6UFzhnuQEsHr4tF0sMBgP0+314nvdfQwHpdrvmJplhTV24lAT55Sl8Xe/xWwUmbnVcsNSPjw+TK2TSNL0Dik4i7pHTiitMcs0yixyfhzN8ev+DL6ut0TYm44LrMQzhOC4UKxRjbGWNy/v9Hoqiu2yHbZoR8H4gIOPecNgw2/Cck6RQZYWyxc+ONeNGALm5YrGSKiIH0QUXxkW/1+ZKRdNKm7wnQLsJ4ytWx4BrfDeEmuyCABET0ockW9GF53o0RHr0mWG9mfgK31yFgefzdo2Es2RyRi1X7MELnZYKRIqqluLH2xum02n7S5mvVvj+/hN/6VhWuynfQvbo9nqFohnWfdmF1wRjdsWa51tLzliiS8GL3DIRt2s9+U1cLOqYsJS4eXa8LGFMvz69E13z+DJ0rYEckHkgs+5uT5ZJEzMECLqmDDI9kgjL6hkwr8XXL38Wee1+pp/j8gyPbLGoBrIl/wNqS4l06+TuJgAAAABJRU5ErkJggg=='); background-size: cover; display: block;"></span>
-  <picture>
-          <source srcset="/notes/static/7344547fcfc4b4eccbe6ef39ca6d8747/a59e9/Pasted%20image%2020250527172459.webp 192w,
-/notes/static/7344547fcfc4b4eccbe6ef39ca6d8747/0ca9f/Pasted%20image%2020250527172459.webp 384w,
-/notes/static/7344547fcfc4b4eccbe6ef39ca6d8747/35d83/Pasted%20image%2020250527172459.webp 751w" sizes="(max-width: 751px) 100vw, 751px" type="image/webp">
-          <source srcset="/notes/static/7344547fcfc4b4eccbe6ef39ca6d8747/3b721/Pasted%20image%2020250527172459.png 192w,
-/notes/static/7344547fcfc4b4eccbe6ef39ca6d8747/66595/Pasted%20image%2020250527172459.png 384w,
-/notes/static/7344547fcfc4b4eccbe6ef39ca6d8747/9ae5c/Pasted%20image%2020250527172459.png 751w" sizes="(max-width: 751px) 100vw, 751px" type="image/png">
-          <img class="gatsby-resp-image-image" src="/notes/static/7344547fcfc4b4eccbe6ef39ca6d8747/9ae5c/Pasted%20image%2020250527172459.png" alt="Pasted image 20250527172459" title="" loading="lazy" decoding="async" style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;">
-        </picture>
-    </span></p>
+<p><img class="obsidian-image" src="false/AttachedFiles/Pasted image 20250527172459.png" placeholder="Pasted image 20250527172459.png" /></p>
 <h2 id="모델-뷰-컨트롤러에-사용되는-패턴-알아보기" style="position:relative;"><a href="#%EB%AA%A8%EB%8D%B8-%EB%B7%B0-%EC%BB%A8%ED%8A%B8%EB%A1%A4%EB%9F%AC%EC%97%90-%EC%82%AC%EC%9A%A9%EB%90%98%EB%8A%94-%ED%8C%A8%ED%84%B4-%EC%95%8C%EC%95%84%EB%B3%B4%EA%B8%B0" aria-label="모델 뷰 컨트롤러에 사용되는 패턴 알아보기 permalink" class="post-toc before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>모델-뷰-컨트롤러에 사용되는 패턴 알아보기</h2>
 <p>모델 (Model)</p>
 <ul>
-<li>옵저버 패턴(<a class="obsidian-internal-link" href="/post/observer-pattern">observer-pattern</a>)을 사용한다.</li>
+<li>옵저버 패턴(<a class="obsidian-internal-link" href="false/post/observer-pattern">observer-pattern</a>)을 사용한다.</li>
 <li>상태가 변경되었을 때 모델과 연관된 객체들에게 연락한다.</li>
 <li>모델을 뷰와 컨트롤러부터 완전히 독립시킬 수 있다.</li>
 <li>한 모델에서 서로 다른 뷰를 사용할 수도, 여러 개의 뷰를 동시에 사용하는 것도 가능하다.</li>
 </ul>
 <p>뷰 (View)</p>
 <ul>
-<li>컴포지트 패턴(<a class="obsidian-internal-link" href="/post/iterator-pattern-composite-pattern">iterator-pattern-composite-pattern</a>), 전략 패턴(<a class="obsidian-internal-link" href="/post/strategy-pattern">strategy-pattern</a>)을 사용한다.</li>
+<li>컴포지트 패턴(<a class="obsidian-internal-link" href="false/post/iterator-pattern-composite-pattern">iterator-pattern-composite-pattern</a>), 전략 패턴(<a class="obsidian-internal-link" href="false/post/strategy-pattern">strategy-pattern</a>)을 사용한다.</li>
 <li>컨트롤러가 뷰에게 화면을 갱신해달라고 요청하면 최상위 뷰 구성요소에게만 갱신요청하기만 하면 된다.</li>
 </ul>
 <p>컨트롤러 (Controller)</p>
 <ul>
-<li>전략 패턴(<a class="obsidian-internal-link" href="/post/strategy-pattern">strategy-pattern</a>)을 사용한다.</li>
+<li>전략 패턴(<a class="obsidian-internal-link" href="false/post/strategy-pattern">strategy-pattern</a>)을 사용한다.</li>
 <li>컨트롤러가 전략을 제공한다.</li>
 <li>뷰는 애플리케이션의 겉모습만 신경을 쓰고, 인터페이스의 모든 행동을 결정하는 일은 모두 컨트롤러에게 맡긴다.</li>
 <li>전략 패턴을 사용하여, 뷰를 모델로부터 분리한다.</li>
@@ -188,4 +177,4 @@ style="width:100%; height: 500px; border:0; border-radius: 4px; overflow:hidden;
           >
             window.___chunkMapping="{\"app\":[\"/app-a511635c203c01a8a142.js\"],\"component---src-pages-404-tsx\":[\"/component---src-pages-404-tsx-d4feba92f51892444586.js\"],\"component---src-pages-index-tsx\":[\"/component---src-pages-index-tsx-962b924bfc7342147b9f.js\"],\"component---src-templates-post-template-tsx\":[\"/component---src-templates-post-template-tsx-f011056cc3c2b532d464.js\"],\"component---src-templates-tag-template-tsx\":[\"/component---src-templates-tag-template-tsx-8af83b6276c36d1be3c4.js\"]}";
           </script>
-        <script>window.___webpackCompilationHash="d056326d5adc61d8f0b9";</script><script src="/notes/webpack-runtime-f8869e346038b3e12964.js" async></script><script src="/notes/framework-56c82047a73c9887ac5e.js" async></script><script src="/notes/app-a511635c203c01a8a142.js" async></script><!-- slice-end id="_gatsby-scripts-1" --></body></html>
+        <script>window.___webpackCompilationHash="f5a9670392231de69ac0";</script><script src="/notes/webpack-runtime-e10758aca528943ecdfc.js" async></script><script src="/notes/framework-56c82047a73c9887ac5e.js" async></script><script src="/notes/app-a511635c203c01a8a142.js" async></script><!-- slice-end id="_gatsby-scripts-1" --></body></html>
