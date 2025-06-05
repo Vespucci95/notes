@@ -13,19 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "헤드 퍼스트 디자인 패턴 14가지 GoF 필살 패턴/proxy-pattern.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "c49db2aaab897ca7",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "헤드 퍼스트 디자인 패턴 14가지 GoF 필살 패턴/real-world-patterns.md",
+                "file": "헤드 퍼스트 디자인 패턴 14가지 GoF 필살 패턴/bridge-pattern.md",
                 "mode": "source",
                 "source": false
               }
@@ -79,8 +67,7 @@
               }
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -109,7 +96,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "",
+                "query": "\"[[",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -146,7 +133,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "헤드 퍼스트 디자인 패턴 14가지 GoF 필살 패턴/real-world-patterns.md",
+                "file": "헤드 퍼스트 디자인 패턴 14가지 GoF 필살 패턴/bridge-pattern.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -163,7 +150,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "헤드 퍼스트 디자인 패턴 14가지 GoF 필살 패턴/real-world-patterns.md",
+                "file": "헤드 퍼스트 디자인 패턴 14가지 GoF 필살 패턴/bridge-pattern.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -186,7 +173,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "헤드 퍼스트 디자인 패턴 14가지 GoF 필살 패턴/real-world-patterns.md"
+                "file": "헤드 퍼스트 디자인 패턴 14가지 GoF 필살 패턴/bridge-pattern.md"
               }
             }
           },
@@ -217,38 +204,42 @@
       "obsidian-excalidraw-plugin:Create new drawing": false
     }
   },
-  "active": "c49db2aaab897ca7",
+  "active": "b926f8e3c7e26991",
   "lastOpenFiles": [
+    "헤드 퍼스트 디자인 패턴 14가지 GoF 필살 패턴/template-method-pattern.md",
+    "헤드 퍼스트 디자인 패턴 14가지 GoF 필살 패턴/singleton-pattern.md",
+    "헤드 퍼스트 디자인 패턴 14가지 GoF 필살 패턴/bridge-pattern.md",
+    "헤드 퍼스트 디자인 패턴 14가지 GoF 필살 패턴/compound-pattern.md",
     "헤드 퍼스트 디자인 패턴 14가지 GoF 필살 패턴/proxy-pattern.md",
     "헤드 퍼스트 디자인 패턴 14가지 GoF 필살 패턴/real-world-patterns.md",
-    "헤드 퍼스트 디자인 패턴 14가지 GoF 필살 패턴/compound-pattern.md",
-    "헤드 퍼스트 디자인 패턴 14가지 GoF 필살 패턴/tag-test.md",
-    "헤드 퍼스트 디자인 패턴 14가지 GoF 필살 패턴/AttachedFiles/Pasted image 20250527172459.png",
-    "헤드 퍼스트 디자인 패턴 14가지 GoF 필살 패턴/iterator-pattern-composite-pattern.md",
-    "헤드 퍼스트 디자인 패턴 14가지 GoF 필살 패턴/command-pattern.md",
+    "헤드 퍼스트 디자인 패턴 14가지 GoF 필살 패턴/state-pattern.md",
     "헤드 퍼스트 디자인 패턴 14가지 GoF 필살 패턴/strategy-pattern.md",
+    "테스트/test01.md",
+    "테스트/test02.md",
     "헤드 퍼스트 디자인 패턴 14가지 GoF 필살 패턴/observer-pattern.md",
-    "헤드 퍼스트 디자인 패턴 14가지 GoF 필살 패턴/adaptor-pattern-facade-pattern.md",
-    "헤드 퍼스트 디자인 패턴 14가지 GoF 필살 패턴/AttachedFiles/64884d3f6d9568a719a2cd71e06cb881.jpg",
-    "헤드 퍼스트 디자인 패턴 14가지 GoF 필살 패턴/singleton-pattern.md",
+    "헤드 퍼스트 디자인 패턴 14가지 GoF 필살 패턴/iterator-pattern-composite-pattern.md",
     "헤드 퍼스트 디자인 패턴 14가지 GoF 필살 패턴/factory-pattern.md",
     "헤드 퍼스트 디자인 패턴 14가지 GoF 필살 패턴/decorator-pattern.md",
-    "헤드 퍼스트 디자인 패턴 14가지 GoF 필살 패턴/template-method-pattern.md",
+    "헤드 퍼스트 디자인 패턴 14가지 GoF 필살 패턴/command-pattern.md",
+    "헤드 퍼스트 디자인 패턴 14가지 GoF 필살 패턴/adaptor-pattern-facade-pattern.md",
+    "테스트",
+    "헤드 퍼스트 디자인 패턴 14가지 GoF 필살 패턴/AttachedFiles/decorator-pattern-01.png",
+    "헤드 퍼스트 디자인 패턴 14가지 GoF 필살 패턴/AttachedFiles/img-3.jpg",
+    "헤드 퍼스트 디자인 패턴 14가지 GoF 필살 패턴/AttachedFiles/observer-pattern-01.png",
+    "헤드 퍼스트 디자인 패턴 14가지 GoF 필살 패턴/AttachedFiles/Pasted image 20250527172459.png",
+    "헤드 퍼스트 디자인 패턴 14가지 GoF 필살 패턴/tag-test.md",
+    "헤드 퍼스트 디자인 패턴 14가지 GoF 필살 패턴/AttachedFiles/64884d3f6d9568a719a2cd71e06cb881.jpg",
     "test/AttachedFiles/img-3.jpg",
     "test/hello-test.md",
     "test/AttachedFiles",
     "test",
     "test/무제 파일.md",
     "test/무제 파일 1.md",
-    "헤드 퍼스트 디자인 패턴 14가지 GoF 필살 패턴/state-pattern.md",
     "test/AttachedFiles/Pasted image 20250517230644.png",
     "test/AttachedFiles/example.png",
     "test/AttachedFiles/observer-pattern-01.png",
     "test/AttachedFiles/Pasted image 20250511211351.png",
-    "test/AttachedFiles/decorator-pattern-01.png",
-    "test/AttachedFiles/11.png",
     "이미지 경로 테스트.md",
-    "헤드 퍼스트 디자인 패턴 14가지 GoF 필살 패턴/AttachedFiles/11.png",
     "헤드 퍼스트 디자인 패턴 14가지 GoF 필살 패턴/AttachedFiles",
     "AttachedFiles",
     "test/obsidian-test.md",
@@ -256,14 +247,10 @@
     "posts/reactnative-masonry-list-improvement-review.md",
     "posts/what-is-lighthouse.md",
     "posts/docker-compose-dev-web-playground.md",
-    "2024/4.md",
-    "2024/3.md",
-    "2024/2.md",
     "2024/media",
     "2024",
     "2024/03",
     "2024",
-    "tips/4.md~",
-    "TypeScript"
+    "tips/4.md~"
   ]
 }
