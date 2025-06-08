@@ -64,8 +64,7 @@ style="width:100%; height: 500px; border:0; border-radius: 4px; overflow:hidden;
 
 ## 정리
 
->[!info] 모델 (Model)
->
+>[!info] 모델 (Model)  
 >데이터, 상태, 비즈니스 로직을 관리한다.
 
 ##### 핵심 역할
@@ -85,8 +84,7 @@ style="width:100%; height: 500px; border:0; border-radius: 4px; overflow:hidden;
 - View나 Controller에 대한 직접적인 의존
 - 화면 표시 관련 로직
 
->[!info] 뷰(View)
->
+>[!info] 뷰(View)  
 >UI 관련 로직을 관리한다.
 
 ##### 핵심 역할

@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "헤드 퍼스트 디자인 패턴 14가지 GoF 필살 패턴/bridge-pattern.md",
+                "file": "헤드 퍼스트 디자인 패턴 14가지 GoF 필살 패턴/test.md",
                 "mode": "source",
                 "source": false
               }
@@ -96,7 +96,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "\"[[",
+                "query": "객체의 상태가",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -133,7 +133,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "헤드 퍼스트 디자인 패턴 14가지 GoF 필살 패턴/bridge-pattern.md",
+                "file": "헤드 퍼스트 디자인 패턴 14가지 GoF 필살 패턴/test.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -150,7 +150,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "헤드 퍼스트 디자인 패턴 14가지 GoF 필살 패턴/bridge-pattern.md",
+                "file": "헤드 퍼스트 디자인 패턴 14가지 GoF 필살 패턴/test.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -173,7 +173,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "헤드 퍼스트 디자인 패턴 14가지 GoF 필살 패턴/bridge-pattern.md"
+                "file": "헤드 퍼스트 디자인 패턴 14가지 GoF 필살 패턴/test.md"
               }
             }
           },
@@ -206,13 +206,22 @@
   },
   "active": "b926f8e3c7e26991",
   "lastOpenFiles": [
+    "헤드 퍼스트 디자인 패턴 14가지 GoF 필살 패턴/compound-pattern.md",
+    "헤드 퍼스트 디자인 패턴 14가지 GoF 필살 패턴/adaptor-pattern-facade-pattern.md",
+    "헤드 퍼스트 디자인 패턴 14가지 GoF 필살 패턴/test.md",
+    "헤드 퍼스트 디자인 패턴 14가지 GoF 필살 패턴/test3.md",
+    "헤드 퍼스트 디자인 패턴 14가지 GoF 필살 패턴/test1.md",
+    "헤드 퍼스트 디자인 패턴 14가지 GoF 필살 패턴/AttachedFiles/decorator-pattern-01.png",
+    "헤드 퍼스트 디자인 패턴 14가지 GoF 필살 패턴/AttachedFiles/img-3.jpg",
+    "헤드 퍼스트 디자인 패턴 14가지 GoF 필살 패턴/AttachedFiles/observer-pattern-01.png",
+    "헤드 퍼스트 디자인 패턴 14가지 GoF 필살 패턴/AttachedFiles/Pasted image 20250527172459.png",
+    "헤드 퍼스트 디자인 패턴 14가지 GoF 필살 패턴/AttachedFiles/Pasted image 20250607141546.png",
+    "헤드 퍼스트 디자인 패턴 14가지 GoF 필살 패턴/state-pattern.md",
+    "헤드 퍼스트 디자인 패턴 14가지 GoF 필살 패턴/bridge-pattern.md",
     "헤드 퍼스트 디자인 패턴 14가지 GoF 필살 패턴/template-method-pattern.md",
     "헤드 퍼스트 디자인 패턴 14가지 GoF 필살 패턴/singleton-pattern.md",
-    "헤드 퍼스트 디자인 패턴 14가지 GoF 필살 패턴/bridge-pattern.md",
-    "헤드 퍼스트 디자인 패턴 14가지 GoF 필살 패턴/compound-pattern.md",
     "헤드 퍼스트 디자인 패턴 14가지 GoF 필살 패턴/proxy-pattern.md",
     "헤드 퍼스트 디자인 패턴 14가지 GoF 필살 패턴/real-world-patterns.md",
-    "헤드 퍼스트 디자인 패턴 14가지 GoF 필살 패턴/state-pattern.md",
     "헤드 퍼스트 디자인 패턴 14가지 GoF 필살 패턴/strategy-pattern.md",
     "테스트/test01.md",
     "테스트/test02.md",
@@ -221,12 +230,7 @@
     "헤드 퍼스트 디자인 패턴 14가지 GoF 필살 패턴/factory-pattern.md",
     "헤드 퍼스트 디자인 패턴 14가지 GoF 필살 패턴/decorator-pattern.md",
     "헤드 퍼스트 디자인 패턴 14가지 GoF 필살 패턴/command-pattern.md",
-    "헤드 퍼스트 디자인 패턴 14가지 GoF 필살 패턴/adaptor-pattern-facade-pattern.md",
     "테스트",
-    "헤드 퍼스트 디자인 패턴 14가지 GoF 필살 패턴/AttachedFiles/decorator-pattern-01.png",
-    "헤드 퍼스트 디자인 패턴 14가지 GoF 필살 패턴/AttachedFiles/img-3.jpg",
-    "헤드 퍼스트 디자인 패턴 14가지 GoF 필살 패턴/AttachedFiles/observer-pattern-01.png",
-    "헤드 퍼스트 디자인 패턴 14가지 GoF 필살 패턴/AttachedFiles/Pasted image 20250527172459.png",
     "헤드 퍼스트 디자인 패턴 14가지 GoF 필살 패턴/tag-test.md",
     "헤드 퍼스트 디자인 패턴 14가지 GoF 필살 패턴/AttachedFiles/64884d3f6d9568a719a2cd71e06cb881.jpg",
     "test/AttachedFiles/img-3.jpg",
@@ -238,15 +242,11 @@
     "test/AttachedFiles/Pasted image 20250517230644.png",
     "test/AttachedFiles/example.png",
     "test/AttachedFiles/observer-pattern-01.png",
-    "test/AttachedFiles/Pasted image 20250511211351.png",
     "이미지 경로 테스트.md",
     "헤드 퍼스트 디자인 패턴 14가지 GoF 필살 패턴/AttachedFiles",
     "AttachedFiles",
     "test/obsidian-test.md",
     "[[strategy-pattern]].md",
-    "posts/reactnative-masonry-list-improvement-review.md",
-    "posts/what-is-lighthouse.md",
-    "posts/docker-compose-dev-web-playground.md",
     "2024/media",
     "2024",
     "2024/03",

@@ -58,7 +58,7 @@
 
 @mixin selection($background-color: #D04E0C, $color: inherit) {
   &::selection {
-    background-color: $background-color;  // 선택 영역 배경색
+    background-color: $background-color; // 선택 영역 배경색
     color: $color
   }
 
@@ -251,6 +251,100 @@
       font-weight: 500;
       border-radius: fn.rem(16px);
       background: #1C6A4B;
+    }
+  }
+
+  [class$="-blockquote"] {
+    border-radius: 12px;
+    border-left: 0;
+    padding: 16px 24px;
+    font-style: normal;
+  }
+  [class$="-blockquote-title"] {
+    font-weight: 600;
+  }
+
+  .note,
+  .info,
+  .todo, {
+    &-blockquote {
+      background: #1C2A3D;
+      &-title {
+        color: #067AFF;
+      }
+    }
+  }
+
+  .abstract,
+  .summary,
+  .tldr,
+  .tip,
+  .hint,
+  .important, {
+    &-blockquote {
+      background: #243439;
+      &-title {
+        color: #53DFDD;
+      }
+    }
+  }
+
+
+  .success,
+  .check,
+  .done, {
+    &-blockquote {
+      background: #21342E;
+      &-title {
+        color: #45CF6E;
+      }
+    }
+  }
+
+  .question,
+  .help,
+  .faq,
+  .warning,
+  .caution,
+  .attention, {
+    &-blockquote {
+      background: #322E2A;
+      &-title {
+        color: #E89740;
+      }
+    }
+  }
+
+  .failure,
+  .fail,
+  .missing,
+  .danger,
+  .error,
+  .bug, {
+    &-blockquote {
+      background: #34262A;
+      &-title {
+        color: #FB464C;
+      }
+    }
+  }
+
+  .example {
+    &-blockquote {
+      background: #2B2B3C;
+      &-title {
+        color: #A882FF;
+      }
+    }
+  }
+
+  .quote,
+  .cite {
+    &-blockquote {
+      background: #292E32;
+      &-title {
+        color: #9E9E9E;
+      }
     }
   }
 }
