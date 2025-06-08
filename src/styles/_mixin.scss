@@ -301,6 +301,11 @@
     }
   }
 
+  .success-blockquote-title:before {
+    content: "✅";
+    margin-right: fn.rem(6px);
+  }
+
   .question,
   .help,
   .faq,
@@ -327,6 +332,11 @@
         color: #FB464C;
       }
     }
+  }
+
+  .fail-blockquote-title:before {
+    content: "❌";
+    margin-right: fn.rem(6px);
   }
 
   .example {

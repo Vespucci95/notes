@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "헤드 퍼스트 디자인 패턴 14가지 GoF 필살 패턴/test.md",
+                "file": "markdown/blog-markdown.md",
                 "mode": "source",
                 "source": false
               }
@@ -133,7 +133,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "헤드 퍼스트 디자인 패턴 14가지 GoF 필살 패턴/test.md",
+                "file": "markdown/blog-markdown.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -150,7 +150,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "헤드 퍼스트 디자인 패턴 14가지 GoF 필살 패턴/test.md",
+                "file": "markdown/blog-markdown.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -173,7 +173,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "헤드 퍼스트 디자인 패턴 14가지 GoF 필살 패턴/test.md"
+                "file": "markdown/blog-markdown.md"
               }
             }
           },
@@ -206,11 +206,13 @@
   },
   "active": "b926f8e3c7e26991",
   "lastOpenFiles": [
+    "markdown/무제 파일.md",
+    "markdown/blog-markdown.md",
+    "헤드 퍼스트 디자인 패턴 14가지 GoF 필살 패턴/test1.md",
+    "markdown",
     "헤드 퍼스트 디자인 패턴 14가지 GoF 필살 패턴/compound-pattern.md",
     "헤드 퍼스트 디자인 패턴 14가지 GoF 필살 패턴/adaptor-pattern-facade-pattern.md",
-    "헤드 퍼스트 디자인 패턴 14가지 GoF 필살 패턴/test.md",
     "헤드 퍼스트 디자인 패턴 14가지 GoF 필살 패턴/test3.md",
-    "헤드 퍼스트 디자인 패턴 14가지 GoF 필살 패턴/test1.md",
     "헤드 퍼스트 디자인 패턴 14가지 GoF 필살 패턴/AttachedFiles/decorator-pattern-01.png",
     "헤드 퍼스트 디자인 패턴 14가지 GoF 필살 패턴/AttachedFiles/img-3.jpg",
     "헤드 퍼스트 디자인 패턴 14가지 GoF 필살 패턴/AttachedFiles/observer-pattern-01.png",
@@ -246,11 +248,9 @@
     "헤드 퍼스트 디자인 패턴 14가지 GoF 필살 패턴/AttachedFiles",
     "AttachedFiles",
     "test/obsidian-test.md",
-    "[[strategy-pattern]].md",
     "2024/media",
     "2024",
     "2024/03",
-    "2024",
-    "tips/4.md~"
+    "2024"
   ]
 }
