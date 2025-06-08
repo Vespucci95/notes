@@ -2964,7 +2964,7 @@ export type SiteMetadataConfigQuery = { __typename?: 'Query', site?: { __typenam
 export type AllCategoriesDataQueryVariables = Exact<{ [key: string]: never; }>;
 
 
-export type AllCategoriesDataQuery = { __typename?: 'Query', allMarkdownRemark: { __typename?: 'MarkdownRemarkConnection', group: Array<{ __typename?: 'MarkdownRemarkGroupConnection', fieldValue?: string | null, totalCount: number, edges: Array<{ __typename?: 'MarkdownRemarkEdge', node: { __typename?: 'MarkdownRemark', id: string, frontmatter?: { __typename?: 'MarkdownRemarkFrontmatter', title?: string | null, date?: any | null } | null, fields?: { __typename?: 'MarkdownRemarkFields', path?: string | null } | null } }> }> } };
+export type AllCategoriesDataQuery = { __typename?: 'Query', allMarkdownRemark: { __typename?: 'MarkdownRemarkConnection', group: Array<{ __typename?: 'MarkdownRemarkGroupConnection', fieldValue?: string | null, totalCount: number, edges: Array<{ __typename?: 'MarkdownRemarkEdge', node: { __typename?: 'MarkdownRemark', id: string, excerpt?: string | null, tags?: Array<string | null> | null, frontmatter?: { __typename?: 'MarkdownRemarkFrontmatter', title?: string | null, date?: any | null, description?: string | null } | null, fields?: { __typename?: 'MarkdownRemarkFields', path?: string | null } | null } }> }> } };
 
 export type PostQueryVariables = Exact<{
   path?: InputMaybe<Scalars['String']['input']>;

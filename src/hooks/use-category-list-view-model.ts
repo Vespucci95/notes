@@ -5,6 +5,8 @@ import { useMemo } from 'react';
 export type Post = {
   title: string;
   path: string;
+  description: string;
+  tags: string[];
 }
 
 export type CategoryModel = {
@@ -22,6 +24,8 @@ export const useCategoryListViewModel = (): CategoryModel[] => {
         posts: category.edges.map((edge) => ({
           title: edge.node.frontmatter?.title || site.siteMetadata.defaultPostTitle,
           path: edge.node.fields?.path || '/',
+          description: edge.node.frontmatter?.description || '',
+          tags: edge.node.tags as string[]
         })),
       }
     )),

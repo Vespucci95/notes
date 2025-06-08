@@ -13,10 +13,13 @@ export const AllCategoriesQuery = graphql`
                         frontmatter {
                             title
                             date
+                            description
                         }
                         fields {
                             path
                         }
+                        excerpt(truncate:true)
+                        tags
                     }
                 }
             }
