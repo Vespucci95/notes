@@ -85,9 +85,9 @@ const config: GatsbyConfig = {
           {
             resolve: `gatsby-remark-obsidian-syntax`,
             options: {
-              toHashTagUrl: (value: string) => `${pathPrefix}/tags/${value.replace(/#/g, '')}`,
-              toPageUrl: (value: string) => `${pathPrefix}/post/${value}`,
-              toImageUrl: (value: string) => `/AttachedFiles/${value}`
+              linkTag: (value: string) => `${pathPrefix}/tags/${value.replace(/#/g, '')}`,
+              linkPage: (value: string) => `${pathPrefix}/post/${value}`,
+              linkImage: (value: string) => `/AttachedFiles/${value}`
             }
           },
           {

@@ -40,7 +40,7 @@ thumbnail:
 
 ## 주문 시스템에 데코레이터 패턴 적용하기
 
-![decorator-pattern-01.png](../media/decorator-pattern-01.png)
+![[decorator-pattern-01.png]]
 
 내용 정리
 
