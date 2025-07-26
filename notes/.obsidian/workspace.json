@@ -13,19 +13,19 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "헤드 퍼스트 디자인 패턴 14가지 GoF 필살 패턴/builder-pattern.md",
+                "file": "Code Spitz - Object Oriented JavaScript/1회차.md",
                 "mode": "source",
                 "source": false
               }
             }
           },
           {
-            "id": "bf92bb2b7d91b173",
+            "id": "a11cef91d2945d42",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "헤드 퍼스트 디자인 패턴 14가지 GoF 필살 패턴/chain-of-responsibility-pattern.md",
+                "file": "Code Spitz - Object Oriented JavaScript/1회차.md",
                 "mode": "source",
                 "source": false
               }
@@ -61,7 +61,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "객체의 상태가",
+                "query": "",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -98,7 +98,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "헤드 퍼스트 디자인 패턴 14가지 GoF 필살 패턴/chain-of-responsibility-pattern.md",
+                "file": "Code Spitz - Object Oriented JavaScript/1회차.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -115,7 +115,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "헤드 퍼스트 디자인 패턴 14가지 GoF 필살 패턴/chain-of-responsibility-pattern.md",
+                "file": "Code Spitz - Object Oriented JavaScript/1회차.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -138,7 +138,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "헤드 퍼스트 디자인 패턴 14가지 GoF 필살 패턴/chain-of-responsibility-pattern.md"
+                "file": "Code Spitz - Object Oriented JavaScript/1회차.md"
               }
             }
           },
@@ -169,11 +169,29 @@
       "obsidian-excalidraw-plugin:Create new drawing": false
     }
   },
-  "active": "bf92bb2b7d91b173",
+  "active": "a11cef91d2945d42",
   "lastOpenFiles": [
-    "헤드 퍼스트 디자인 패턴 14가지 GoF 필살 패턴/builder-pattern.md",
+    "Code Spitz - Object Oriented JavaScript/1회차.md",
+    "markdown/blog-markdown.md",
+    "Code Spitz - Object Oriented JavaScript/AttachedFiles/Pasted image 20250626185840.png",
+    "Code Spitz - Object Oriented JavaScript/AttachedFiles/Pasted image 20250626185833.png",
+    "Code Spitz - Object Oriented JavaScript/AttachedFiles/Pasted image 20250626185829.png",
+    "Code Spitz - Object Oriented JavaScript/AttachedFiles",
+    "Excalidraw/Drawing 2025-06-26 18.47.16.excalidraw.md",
+    "Excalidraw",
+    "헤드 퍼스트 디자인 패턴 14가지 GoF 필살 패턴/command-pattern.md",
+    "헤드 퍼스트 디자인 패턴 14가지 GoF 필살 패턴/adaptor-pattern-facade-pattern.md",
+    "헤드 퍼스트 디자인 패턴 14가지 GoF 필살 패턴/flyweight-pattern.md",
     "헤드 퍼스트 디자인 패턴 14가지 GoF 필살 패턴/chain-of-responsibility-pattern.md",
+    "헤드 퍼스트 디자인 패턴 14가지 GoF 필살 패턴/compound-pattern.md",
+    "헤드 퍼스트 디자인 패턴 14가지 GoF 필살 패턴/decorator-pattern.md",
+    "헤드 퍼스트 디자인 패턴 14가지 GoF 필살 패턴/factory-pattern.md",
+    "헤드 퍼스트 디자인 패턴 14가지 GoF 필살 패턴/proxy-pattern.md",
+    "헤드 퍼스트 디자인 패턴 14가지 GoF 필살 패턴/real-world-patterns.md",
     "헤드 퍼스트 디자인 패턴 14가지 GoF 필살 패턴/AttachedFiles/Pasted image 20250616140341.png",
+    "Code Spitz - Object Oriented JavaScript",
+    "헤드 퍼스트 디자인 패턴 14가지 GoF 필살 패턴/AttachedFiles/Pasted image 20250616140341 복사본.png",
+    "헤드 퍼스트 디자인 패턴 14가지 GoF 필살 패턴/builder-pattern.md",
     "헤드 퍼스트 디자인 패턴 14가지 GoF 필살 패턴/AttachedFiles/Pasted image 20250609013611.png",
     "헤드 퍼스트 디자인 패턴 14가지 GoF 필살 패턴/AttachedFiles/Pasted image 20250609013611 1.png",
     "헤드 퍼스트 디자인 패턴 14가지 GoF 필살 패턴/bridge-pattern.md",
@@ -181,13 +199,8 @@
     "헤드 퍼스트 디자인 패턴 14가지 GoF 필살 패턴/state-pattern.md",
     "헤드 퍼스트 디자인 패턴 14가지 GoF 필살 패턴/strategy-pattern.md",
     "헤드 퍼스트 디자인 패턴 14가지 GoF 필살 패턴/template-method-pattern.md",
-    "markdown/blog-markdown.md",
-    "헤드 퍼스트 디자인 패턴 14가지 GoF 필살 패턴/decorator-pattern.md",
     "builder-patte.md",
-    "헤드 퍼스트 디자인 패턴 14가지 GoF 필살 패턴/compound-pattern.md",
-    "헤드 퍼스트 디자인 패턴 14가지 GoF 필살 패턴/real-world-patterns.md",
     "헤드 퍼스트 디자인 패턴 14가지 GoF 필살 패턴/iterator-pattern-composite-pattern.md",
-    "헤드 퍼스트 디자인 패턴 14가지 GoF 필살 패턴/adaptor-pattern-facade-pattern.md",
     "markdown/무제 파일.md",
     "헤드 퍼스트 디자인 패턴 14가지 GoF 필살 패턴/test1.md",
     "markdown",
@@ -195,26 +208,13 @@
     "헤드 퍼스트 디자인 패턴 14가지 GoF 필살 패턴/AttachedFiles/decorator-pattern-01.png",
     "헤드 퍼스트 디자인 패턴 14가지 GoF 필살 패턴/AttachedFiles/img-3.jpg",
     "헤드 퍼스트 디자인 패턴 14가지 GoF 필살 패턴/AttachedFiles/observer-pattern-01.png",
-    "헤드 퍼스트 디자인 패턴 14가지 GoF 필살 패턴/AttachedFiles/Pasted image 20250527172459.png",
-    "헤드 퍼스트 디자인 패턴 14가지 GoF 필살 패턴/AttachedFiles/Pasted image 20250607141546.png",
-    "헤드 퍼스트 디자인 패턴 14가지 GoF 필살 패턴/proxy-pattern.md",
     "테스트/test01.md",
     "테스트/test02.md",
-    "헤드 퍼스트 디자인 패턴 14가지 GoF 필살 패턴/observer-pattern.md",
-    "헤드 퍼스트 디자인 패턴 14가지 GoF 필살 패턴/factory-pattern.md",
-    "헤드 퍼스트 디자인 패턴 14가지 GoF 필살 패턴/command-pattern.md",
     "테스트",
-    "헤드 퍼스트 디자인 패턴 14가지 GoF 필살 패턴/tag-test.md",
-    "헤드 퍼스트 디자인 패턴 14가지 GoF 필살 패턴/AttachedFiles/64884d3f6d9568a719a2cd71e06cb881.jpg",
-    "test/AttachedFiles/img-3.jpg",
-    "test/hello-test.md",
     "test/AttachedFiles",
     "test",
     "헤드 퍼스트 디자인 패턴 14가지 GoF 필살 패턴/AttachedFiles",
     "AttachedFiles",
-    "2024/media",
-    "2024",
-    "2024/03",
-    "2024"
+    "2024/media"
   ]
 }
