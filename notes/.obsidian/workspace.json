@@ -61,7 +61,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "",
+                "query": "tag:#비지터패턴",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -78,7 +78,8 @@
               "state": {}
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "horizontal",
@@ -169,13 +170,13 @@
       "obsidian-excalidraw-plugin:Create new drawing": false
     }
   },
-  "active": "a11cef91d2945d42",
+  "active": "d664d54a4885a396",
   "lastOpenFiles": [
-    "Code Spitz - Object Oriented JavaScript/1회차.md",
-    "markdown/blog-markdown.md",
     "Code Spitz - Object Oriented JavaScript/AttachedFiles/Pasted image 20250626185840.png",
     "Code Spitz - Object Oriented JavaScript/AttachedFiles/Pasted image 20250626185833.png",
     "Code Spitz - Object Oriented JavaScript/AttachedFiles/Pasted image 20250626185829.png",
+    "Code Spitz - Object Oriented JavaScript/1회차.md",
+    "markdown/blog-markdown.md",
     "Code Spitz - Object Oriented JavaScript/AttachedFiles",
     "Excalidraw/Drawing 2025-06-26 18.47.16.excalidraw.md",
     "Excalidraw",
