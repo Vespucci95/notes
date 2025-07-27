@@ -518,7 +518,7 @@ console<span class="token punctuation">.</span><span class="token function">log<
 </ul>
 </li>
 </ul>
-<p>각 오퍼레이션 실행 시 임시적인 의존성</p>
+<p>각 오퍼레이션 실행 시 임시적인 의존성 (약한 의존성)</p>
 <ul>
 <li>의존 (dependency)</li>
 </ul>
@@ -527,9 +527,173 @@ console<span class="token punctuation">.</span><span class="token function">log<
 <ol>
 <li>수정 여파 규모증가</li>
 <li>수정하기 어려운 구조 생성</li>
+</ol>
+</blockquote>
+<div class="gatsby-highlight" data-language="text"><pre class="language-text"><code class="language-text">- 수정하기 어려운 구조란 무엇인가?
+	- 클래스 내부의 작업은 이해가되지만 어디까지 전파될지 모르기에 겁이난다.</code></pre></div>
+<blockquote class="">
+<ol start="3">
 <li>순환 의존성</li>
 </ol>
-</blockquote></div></div><div class="post_template-module--post-template__side-right--e4a5e"><div style="display:flex;flex-direction:column;align-items:start;gap:8px"><div style="display:flex;flex-direction:column;justify-content:center;align-items:start;gap:8px"><div style="width:45px;height:4px;border-radius:2px;background-color:#71717B;position:relative;overflow:hidden"><div style="height:100%;background-color:#FFF;transform-origin:left;width:0%"></div></div><div style="width:43px;height:4px;border-radius:2px;background-color:#71717B;position:relative;overflow:hidden"><div style="height:100%;background-color:#FFF;transform-origin:left;width:0%"></div></div><div style="width:36px;height:4px;border-radius:2px;background-color:#71717B;position:relative;overflow:hidden"><div style="height:100%;background-color:#FFF;transform-origin:left;width:0%"></div></div><div style="width:42px;height:4px;border-radius:2px;background-color:#71717B;position:relative;overflow:hidden"><div style="height:100%;background-color:#FFF;transform-origin:left;width:0%"></div></div><div style="width:50px;height:4px;border-radius:2px;background-color:#71717B;position:relative;overflow:hidden"><div style="height:100%;background-color:#FFF;transform-origin:left;width:0%"></div></div><div style="width:38px;height:4px;border-radius:2px;background-color:#71717B;position:relative;overflow:hidden"><div style="height:100%;background-color:#FFF;transform-origin:left;width:0%"></div></div><div style="width:35px;height:4px;border-radius:2px;background-color:#71717B;position:relative;overflow:hidden"><div style="height:100%;background-color:#FFF;transform-origin:left;width:0%"></div></div><div style="width:37px;height:4px;border-radius:2px;background-color:#71717B;position:relative;overflow:hidden"><div style="height:100%;background-color:#FFF;transform-origin:left;width:0%"></div></div><div style="width:40px;height:4px;border-radius:2px;background-color:#71717B;position:relative;overflow:hidden"><div style="height:100%;background-color:#FFF;transform-origin:left;width:0%"></div></div><div style="width:46px;height:4px;border-radius:2px;background-color:#71717B;position:relative;overflow:hidden"><div style="height:100%;background-color:#FFF;transform-origin:left;width:0%"></div></div><div style="width:42px;height:4px;border-radius:2px;background-color:#71717B;position:relative;overflow:hidden"><div style="height:100%;background-color:#FFF;transform-origin:left;width:0%"></div></div><div style="width:46px;height:4px;border-radius:2px;background-color:#71717B;position:relative;overflow:hidden"><div style="height:100%;background-color:#FFF;transform-origin:left;width:0%"></div></div><div style="width:35px;height:4px;border-radius:2px;background-color:#71717B;position:relative;overflow:hidden"><div style="height:100%;background-color:#FFF;transform-origin:left;width:0%"></div></div><div style="width:41px;height:4px;border-radius:2px;background-color:#71717B;position:relative;overflow:hidden"><div style="height:100%;background-color:#FFF;transform-origin:left;width:0%"></div></div><div style="width:35px;height:4px;border-radius:2px;background-color:#71717B;position:relative;overflow:hidden"><div style="height:100%;background-color:#FFF;transform-origin:left;width:0%"></div></div><div style="width:37px;height:4px;border-radius:2px;background-color:#71717B;position:relative;overflow:hidden"><div style="height:100%;background-color:#FFF;transform-origin:left;width:0%"></div></div></div><div style="display:flex;justify-content:center;align-items:center;gap:6px"><svg width="20" height="20" viewBox="0 0 20 20" style="transform:rotate(-90deg)"><circle cx="10" cy="10" r="8" stroke="#71717B" fill="none" stroke-width="4"></circle><circle cx="10" cy="10" r="8" stroke="#FFF" fill="none" stroke-width="4" stroke-dasharray="50.26548245743669" stroke-dashoffset="50.26548245743669" style="stroke-linecap:round"></circle></svg><div class="no-drag" style="display:flex;font-size:0.8rem;width:36px;font-weight:bold;color:#FFF"><div>0</div>%</div></div></div></div></div></main></div></div><div id="gatsby-announcer" style="position:absolute;top:0;width:1px;height:1px;padding:0;overflow:hidden;clip:rect(0, 0, 0, 0);white-space:nowrap;border:0" aria-live="assertive" aria-atomic="true"></div></div><script id="gatsby-script-loader">/*<![CDATA[*/window.pagePath="/post/1회차/";/*]]>*/</script><!-- slice-start id="_gatsby-scripts-1" -->
+<ul>
+<li>A를 고쳤는데 B가 망가지는경우</li>
+<li>의존성은 단계별로 끊어내지 않으면 한가득으로 문제가발생할 것.</li>
+</ul>
+</blockquote>
+<h2 id="dependency-inversion" style="position:relative;"><a href="#dependency-inversion" aria-label="dependency inversion permalink" class="post-toc before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Dependency Inversion</h2>
+<p>어떠한 경우에도 다운캐스팅은 금지
+폴리모피즘 (추상인터페이스) 사용</p>
+<p>즉, 다운 캐스팅을 하지말고 항상 추상인터페이스를 사용해라.</p>
+<div class="gatsby-highlight" data-language="js"><pre class="language-js"><code class="language-js"><span class="token keyword">const</span> Worker <span class="token operator">=</span> <span class="token keyword">class</span> <span class="token punctuation">{</span>  
+  <span class="token function">run</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>  
+    console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'working'</span><span class="token punctuation">)</span>  
+  <span class="token punctuation">}</span>  
+  <span class="token function">print</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>  
+    <span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">run</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>  
+  <span class="token punctuation">}</span>  
+<span class="token punctuation">}</span>  
+  
+<span class="token keyword">const</span> HardWorker <span class="token operator">=</span> <span class="token keyword">class</span> <span class="token class-name">extends</span> Worker <span class="token punctuation">{</span>  
+  <span class="token function">run</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>  
+    console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'hardWorking'</span><span class="token punctuation">)</span>  
+  <span class="token punctuation">}</span>  
+<span class="token punctuation">}</span></code></pre></div>
+<div class="gatsby-highlight" data-language="js"><pre class="language-js"><code class="language-js"><span class="token keyword">const</span> Manager <span class="token operator">=</span> <span class="token keyword">class</span> <span class="token punctuation">{</span>  
+  #workers<span class="token punctuation">;</span>  
+  
+  <span class="token function">constructor</span><span class="token punctuation">(</span><span class="token parameter"><span class="token operator">...</span>workers</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>  
+    <span class="token keyword">if</span> <span class="token punctuation">(</span>workers<span class="token punctuation">.</span><span class="token function">every</span><span class="token punctuation">(</span><span class="token parameter">w</span> <span class="token operator">=></span> w <span class="token keyword">instanceof</span> <span class="token class-name">Worker</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>  
+      <span class="token keyword">this</span><span class="token punctuation">.</span>#workers <span class="token operator">=</span> workers<span class="token punctuation">;</span>  
+    <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token punctuation">{</span>  
+      <span class="token keyword">throw</span> <span class="token string">'invalid workers'</span><span class="token punctuation">;</span>  
+    <span class="token punctuation">}</span>  
+  <span class="token punctuation">}</span>  
+  
+  <span class="token function">doWork</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>  
+    <span class="token keyword">this</span><span class="token punctuation">.</span>#workers<span class="token punctuation">.</span><span class="token function">forEach</span><span class="token punctuation">(</span><span class="token parameter">w</span> <span class="token operator">=></span> w<span class="token punctuation">.</span><span class="token function">run</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>  
+  <span class="token punctuation">}</span>  
+<span class="token punctuation">}</span>
+
+<span class="token keyword">const</span> manager <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Manager</span><span class="token punctuation">(</span><span class="token keyword">new</span> <span class="token class-name">Worker</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token keyword">new</span> <span class="token class-name">HardWorker</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>  
+manager<span class="token punctuation">.</span><span class="token function">doWork</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span></code></pre></div>
+<p><code class="language-text">Manager</code> 는 <a class="obsidian-tag" href="/notes/tags/OCP">#OCP</a> 를 준수한다.<br>
+<code class="language-text">Worker</code>클래스가 증가해도 <code class="language-text">Manager</code> 클래스를 변경할 필요가 없다. 즉, 변화에는 닫혀있다.</p>
+<p><strong>OCP를 달성하게되면 자연스럽게 의존성 역전이 달성된다.</strong><br>
+보다 구체화되어있고 확장된 쪽으로 갖고있지 않고, <strong>보다 추상화된 부분을 갖는다.</strong></p>
+<p>코드에서 뭐 의미하고 싶은지가 드러나야한다.</p>
+<h2 id="inversion-of-control" style="position:relative;"><a href="#inversion-of-control" aria-label="inversion of control permalink" class="post-toc before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Inversion of Control</h2>
+<p><a class="obsidian-tag" href="/notes/tags/IOC">#IOC</a></p>
+<ul>
+<li>궁극적으로 도달하고 싶은 범위</li>
+<li>SOLID 조차도 IOC를 위한 것</li>
+</ul>
+<h2 id="제어역전의-개념과-필요성" style="position:relative;"><a href="#%EC%A0%9C%EC%96%B4%EC%97%AD%EC%A0%84%EC%9D%98-%EA%B0%9C%EB%85%90%EA%B3%BC-%ED%95%84%EC%9A%94%EC%84%B1" aria-label="제어역전의 개념과 필요성 permalink" class="post-toc before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>제어역전의 개념과 필요성</h2>
+<p>개념</p>
+<ol>
+<li>Control = flow control (흐름제어)</li>
+<li>광의에서 흐름 제어 = 프로그램 실행 통제</li>
+<li>동기흐름제어, 비동기 흐름제어 등</li>
+</ol>
+<p>역전이 무슨 말인가?</p>
+<ul>
+<li>제어를 안하는 것인가?</li>
+<li>역으로 그 일을 대체할 녀석을 만들겠다 와 같은 말</li>
+<li>대체하겠다는 의미</li>
+</ul>
+<p>문제점</p>
+<ol>
+<li>흐름 제어는 상태와 결합하여 진행됨</li>
+<li>상태 통제와 흐름제어 = 알고리즘</li>
+<li>변화에 취약하고 구현하기도 어려움</li>
+</ol>
+<p>대안</p>
+<ol>
+<li>제어를 추상화하고</li>
+<li>개별 제어의 차이점만 외부에서 주입받는다.</li>
+</ol>
+<div class="gatsby-highlight" data-language="js"><pre class="language-js"><code class="language-js"><span class="token keyword">const</span> View <span class="token operator">=</span> <span class="token keyword">class</span> <span class="token punctuation">{</span>  
+  <span class="token function">getElement</span><span class="token punctuation">(</span><span class="token parameter">data</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>  
+    <span class="token keyword">throw</span> <span class="token string">'override!'</span>  
+  <span class="token punctuation">}</span><span class="token punctuation">;</span>  
+  
+  <span class="token function">initAni</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>  
+    <span class="token keyword">throw</span> <span class="token string">'override!'</span>  
+  <span class="token punctuation">}</span>  
+  
+  <span class="token function">startAni</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>  
+    <span class="token keyword">throw</span> <span class="token string">'override!'</span>  
+  <span class="token punctuation">}</span>  
+<span class="token punctuation">}</span>  
+  
+<span class="token keyword">const</span> Renderer <span class="token operator">=</span> <span class="token keyword">class</span> <span class="token punctuation">{</span>  
+  #view <span class="token operator">=</span> <span class="token keyword">null</span><span class="token punctuation">;</span>  
+  #base <span class="token operator">=</span> <span class="token keyword">null</span><span class="token punctuation">;</span>  
+  
+  <span class="token function">constructor</span><span class="token punctuation">(</span><span class="token parameter">baseElement</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>  
+    <span class="token keyword">this</span><span class="token punctuation">.</span>#base <span class="token operator">=</span> baseElement<span class="token punctuation">;</span>  
+  <span class="token punctuation">}</span>  
+  
+  <span class="token keyword">set</span> <span class="token function">view</span><span class="token punctuation">(</span><span class="token parameter">v</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>  
+    <span class="token keyword">if</span> <span class="token punctuation">(</span>v <span class="token keyword">instanceof</span> <span class="token class-name">View</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>  
+      <span class="token keyword">this</span><span class="token punctuation">.</span>#view <span class="token operator">=</span> v<span class="token punctuation">;</span>  
+    <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token punctuation">{</span>  
+      <span class="token keyword">throw</span> <span class="token template-string"><span class="token template-punctuation string">`</span><span class="token string">invalid view: </span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span> v <span class="token interpolation-punctuation punctuation">}</span></span><span class="token template-punctuation string">`</span></span>  
+    <span class="token punctuation">}</span>  
+  <span class="token punctuation">}</span>  
+  
+  <span class="token function">render</span><span class="token punctuation">(</span><span class="token parameter">data</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>  
+    <span class="token keyword">const</span> base <span class="token operator">=</span> <span class="token keyword">this</span><span class="token punctuation">.</span>#base<span class="token punctuation">;</span>  
+    <span class="token keyword">const</span> view <span class="token operator">=</span> <span class="token keyword">this</span><span class="token punctuation">.</span>#view<span class="token punctuation">;</span>  
+  
+    <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token operator">!</span>base <span class="token operator">||</span> <span class="token operator">!</span>view<span class="token punctuation">)</span> <span class="token keyword">return</span> <span class="token string">'no base or view'</span><span class="token punctuation">;</span>  
+  
+    <span class="token keyword">let</span> target <span class="token operator">=</span> base<span class="token punctuation">.</span>firstElementChild<span class="token punctuation">;</span>  
+  
+    <span class="token keyword">do</span> base<span class="token punctuation">.</span><span class="token function">removeChild</span><span class="token punctuation">(</span>target<span class="token punctuation">)</span><span class="token punctuation">;</span>  
+    <span class="token keyword">while</span> <span class="token punctuation">(</span>target <span class="token operator">=</span> target<span class="token punctuation">.</span>nextElementSibling<span class="token punctuation">)</span><span class="token punctuation">;</span>  
+  
+    base<span class="token punctuation">.</span><span class="token function">appendchild</span><span class="token punctuation">(</span>view<span class="token punctuation">.</span><span class="token function">getElement</span><span class="token punctuation">(</span>data<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>  
+    view<span class="token punctuation">.</span><span class="token function">initAni</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>  
+    view<span class="token punctuation">.</span><span class="token function">startAni</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>  
+  <span class="token punctuation">}</span>  
+<span class="token punctuation">}</span>
+
+<span class="token keyword">const</span> renderer <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Renderer</span><span class="token punctuation">(</span>document<span class="token punctuation">.</span>body<span class="token punctuation">)</span><span class="token punctuation">;</span>  
+  
+renderer<span class="token punctuation">.</span>view <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">class</span> <span class="token keyword">extends</span> <span class="token class-name">View</span> <span class="token punctuation">{</span>  
+  #el<span class="token punctuation">;</span>  
+  
+  <span class="token function">getElement</span><span class="token punctuation">(</span><span class="token parameter">data</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>  
+    <span class="token keyword">this</span><span class="token punctuation">.</span>#el <span class="token operator">=</span> document<span class="token punctuation">.</span><span class="token function">createElement</span><span class="token punctuation">(</span><span class="token string">"div"</span><span class="token punctuation">)</span>  
+    <span class="token keyword">this</span><span class="token punctuation">.</span>#el<span class="token punctuation">.</span>innerHTML <span class="token operator">=</span> <span class="token template-string"><span class="token template-punctuation string">`</span><span class="token string">&lt;h2></span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span> data<span class="token punctuation">.</span>title <span class="token interpolation-punctuation punctuation">}</span></span><span class="token string">&lt;/h2></span><span class="token template-punctuation string">`</span></span>  
+    <span class="token keyword">this</span><span class="token punctuation">.</span>#el<span class="token punctuation">.</span>style<span class="token punctuation">.</span>cssText <span class="token operator">=</span> <span class="token template-string"><span class="token template-punctuation string">`</span><span class="token string">width:100%; background:</span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span> data<span class="token punctuation">.</span>background <span class="token interpolation-punctuation punctuation">}</span></span><span class="token template-punctuation string">`</span></span>  
+  <span class="token punctuation">}</span>  
+  
+  <span class="token function">initAni</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>  
+    <span class="token keyword">const</span> style <span class="token operator">=</span> <span class="token keyword">this</span><span class="token punctuation">.</span>#el<span class="token punctuation">.</span>style<span class="token punctuation">;</span>  
+    style<span class="token punctuation">.</span>marginLeft <span class="token operator">=</span> <span class="token string">'100%'</span><span class="token punctuation">;</span>  
+    style<span class="token punctuation">.</span>transition <span class="token operator">=</span> <span class="token string">'all 0.3s'</span><span class="token punctuation">;</span>  
+  <span class="token punctuation">}</span>  
+  
+  <span class="token function">startAni</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>  
+    <span class="token function">requestAnimationFrame</span><span class="token punctuation">(</span><span class="token parameter">_</span> <span class="token operator">=></span> <span class="token keyword">this</span><span class="token punctuation">.</span>#el<span class="token punctuation">.</span>style<span class="token punctuation">.</span>marginLeft <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">)</span>  
+  <span class="token punctuation">}</span>  
+<span class="token punctuation">}</span></code></pre></div>
+<p>제어에 대한 부분은 <code class="language-text">Renerer</code>만 가지고 있다.<br>
+추가로 IOC가 되지 않는 것들은 프레임워크라고 부르지 않는다.</p>
+<h2 id="제어역전-실제-구현" style="position:relative;"><a href="#%EC%A0%9C%EC%96%B4%EC%97%AD%EC%A0%84-%EC%8B%A4%EC%A0%9C-%EA%B5%AC%ED%98%84" aria-label="제어역전 실제 구현 permalink" class="post-toc before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>제어역전 실제 구현</h2>
+<blockquote class="">
+<p>전략 패턴 &#x26; 템플릿 메소드 패턴 &#x3C; 컴포지트 패턴 &#x3C; 비지터 패턴<br>
+보다 넓은 범위의 제어 역전을 실현함</p>
+</blockquote>
+<ul>
+<li><a class="obsidian-tag" href="/notes/tags/전략패턴">#전략패턴</a>  <a class="obsidian-tag" href="/notes/tags/템플릿메소드패턴">#템플릿메소드패턴</a>  : 가장 소극적인 제어역전</li>
+<li><a class="obsidian-tag" href="/notes/tags/컴포지트패턴">#컴포지트패턴</a>  : 보다 광범위한 범위의 제어역전</li>
+<li><a class="obsidian-tag" href="/notes/tags/비지터패턴">#비지터패턴</a></li>
+</ul>
+<p><a class="obsidian-tag" href="/notes/tags/추상팩토리메소드">#추상팩토리메소드</a> 패턴
+왼쪽 패턴은 이미 만들어진 객체의 행위를 제어역전에 참여시킬 수 있지만 참여할 객체 자체를 생성할 수 없음.<br>
+참여할 객체를 상황에 맞게 생성하고 행위까지 위임하기 위해 추상팩토리 메소드를 사용함</p></div></div><div class="post_template-module--post-template__side-right--e4a5e"><div style="display:flex;flex-direction:column;align-items:start;gap:8px"><div style="display:flex;flex-direction:column;justify-content:center;align-items:start;gap:8px"><div style="width:44px;height:4px;border-radius:2px;background-color:#71717B;position:relative;overflow:hidden"><div style="height:100%;background-color:#FFF;transform-origin:left;width:0%"></div></div><div style="width:42px;height:4px;border-radius:2px;background-color:#71717B;position:relative;overflow:hidden"><div style="height:100%;background-color:#FFF;transform-origin:left;width:0%"></div></div><div style="width:36px;height:4px;border-radius:2px;background-color:#71717B;position:relative;overflow:hidden"><div style="height:100%;background-color:#FFF;transform-origin:left;width:0%"></div></div><div style="width:42px;height:4px;border-radius:2px;background-color:#71717B;position:relative;overflow:hidden"><div style="height:100%;background-color:#FFF;transform-origin:left;width:0%"></div></div><div style="width:49px;height:4px;border-radius:2px;background-color:#71717B;position:relative;overflow:hidden"><div style="height:100%;background-color:#FFF;transform-origin:left;width:0%"></div></div><div style="width:38px;height:4px;border-radius:2px;background-color:#71717B;position:relative;overflow:hidden"><div style="height:100%;background-color:#FFF;transform-origin:left;width:0%"></div></div><div style="width:35px;height:4px;border-radius:2px;background-color:#71717B;position:relative;overflow:hidden"><div style="height:100%;background-color:#FFF;transform-origin:left;width:0%"></div></div><div style="width:37px;height:4px;border-radius:2px;background-color:#71717B;position:relative;overflow:hidden"><div style="height:100%;background-color:#FFF;transform-origin:left;width:0%"></div></div><div style="width:39px;height:4px;border-radius:2px;background-color:#71717B;position:relative;overflow:hidden"><div style="height:100%;background-color:#FFF;transform-origin:left;width:0%"></div></div><div style="width:45px;height:4px;border-radius:2px;background-color:#71717B;position:relative;overflow:hidden"><div style="height:100%;background-color:#FFF;transform-origin:left;width:0%"></div></div><div style="width:42px;height:4px;border-radius:2px;background-color:#71717B;position:relative;overflow:hidden"><div style="height:100%;background-color:#FFF;transform-origin:left;width:0%"></div></div><div style="width:45px;height:4px;border-radius:2px;background-color:#71717B;position:relative;overflow:hidden"><div style="height:100%;background-color:#FFF;transform-origin:left;width:0%"></div></div><div style="width:35px;height:4px;border-radius:2px;background-color:#71717B;position:relative;overflow:hidden"><div style="height:100%;background-color:#FFF;transform-origin:left;width:0%"></div></div><div style="width:41px;height:4px;border-radius:2px;background-color:#71717B;position:relative;overflow:hidden"><div style="height:100%;background-color:#FFF;transform-origin:left;width:0%"></div></div><div style="width:35px;height:4px;border-radius:2px;background-color:#71717B;position:relative;overflow:hidden"><div style="height:100%;background-color:#FFF;transform-origin:left;width:0%"></div></div><div style="width:39px;height:4px;border-radius:2px;background-color:#71717B;position:relative;overflow:hidden"><div style="height:100%;background-color:#FFF;transform-origin:left;width:0%"></div></div><div style="width:43px;height:4px;border-radius:2px;background-color:#71717B;position:relative;overflow:hidden"><div style="height:100%;background-color:#FFF;transform-origin:left;width:0%"></div></div><div style="width:35px;height:4px;border-radius:2px;background-color:#71717B;position:relative;overflow:hidden"><div style="height:100%;background-color:#FFF;transform-origin:left;width:0%"></div></div><div style="width:50px;height:4px;border-radius:2px;background-color:#71717B;position:relative;overflow:hidden"><div style="height:100%;background-color:#FFF;transform-origin:left;width:0%"></div></div><div style="width:37px;height:4px;border-radius:2px;background-color:#71717B;position:relative;overflow:hidden"><div style="height:100%;background-color:#FFF;transform-origin:left;width:0%"></div></div></div><div style="display:flex;justify-content:center;align-items:center;gap:6px"><svg width="20" height="20" viewBox="0 0 20 20" style="transform:rotate(-90deg)"><circle cx="10" cy="10" r="8" stroke="#71717B" fill="none" stroke-width="4"></circle><circle cx="10" cy="10" r="8" stroke="#FFF" fill="none" stroke-width="4" stroke-dasharray="50.26548245743669" stroke-dashoffset="50.26548245743669" style="stroke-linecap:round"></circle></svg><div class="no-drag" style="display:flex;font-size:0.8rem;width:36px;font-weight:bold;color:#FFF"><div>0</div>%</div></div></div></div></div></main></div></div><div id="gatsby-announcer" style="position:absolute;top:0;width:1px;height:1px;padding:0;overflow:hidden;clip:rect(0, 0, 0, 0);white-space:nowrap;border:0" aria-live="assertive" aria-atomic="true"></div></div><script id="gatsby-script-loader">/*<![CDATA[*/window.pagePath="/post/1회차/";/*]]>*/</script><!-- slice-start id="_gatsby-scripts-1" -->
           <script
             id="gatsby-chunk-mapping"
           >
