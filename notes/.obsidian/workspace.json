@@ -20,6 +20,16 @@
             }
           },
           {
+            "id": "d12ecbbb80127739",
+            "type": "leaf",
+            "state": {
+              "type": "excalidraw",
+              "state": {
+                "file": "Excalidraw/Drawing 2025-08-03 18.27.49.excalidraw.md"
+              }
+            }
+          },
+          {
             "id": "072c00e704cce9e7",
             "type": "leaf",
             "state": {
@@ -170,6 +180,11 @@
   },
   "active": "a11cef91d2945d42",
   "lastOpenFiles": [
+    "Code Spitz - Object Oriented JavaScript/1회차.md",
+    "Code Spitz - Object Oriented JavaScript/2회차.md",
+    "Code Spitz - Object Oriented JavaScript/AttachedFiles/Pasted image 20250803183350.png",
+    "Excalidraw/Drawing 2025-08-03 18.27.49.excalidraw.md",
+    "Excalidraw",
     "Code Spitz - Object Oriented JavaScript/AttachedFiles/Pasted image 20250727192743.png",
     "헤드 퍼스트 디자인 패턴 14가지 GoF 필살 패턴/template-method-pattern.md",
     "헤드 퍼스트 디자인 패턴 14가지 GoF 필살 패턴/strategy-pattern.md",
@@ -179,29 +194,24 @@
     "헤드 퍼스트 디자인 패턴 14가지 GoF 필살 패턴/proxy-pattern.md",
     "헤드 퍼스트 디자인 패턴 14가지 GoF 필살 패턴/observer-pattern.md",
     "헤드 퍼스트 디자인 패턴 14가지 GoF 필살 패턴/flyweight-pattern.md",
-    "Code Spitz - Object Oriented JavaScript/2회차.md",
     "Code Spitz - Object Oriented JavaScript/AttachedFiles/Pasted image 20250727190150.png",
     "Code Spitz - Object Oriented JavaScript/AttachedFiles/Pasted image 20250727185424.png",
     "Code Spitz - Object Oriented JavaScript/AttachedFiles/Pasted image 20250727185359.png",
     "Code Spitz - Object Oriented JavaScript/AttachedFiles/Pasted image 20250727184942.png",
     "헤드 퍼스트 디자인 패턴 14가지 GoF 필살 패턴/compound-pattern.md",
     "Code Spitz - Object Oriented JavaScript/AttachedFiles/Pasted image 20250727183604.png",
-    "Code Spitz - Object Oriented JavaScript/1회차.md",
     "Code Spitz - Object Oriented JavaScript/AttachedFiles/Pasted image 20250626185840.png",
     "Code Spitz - Object Oriented JavaScript/AttachedFiles/Pasted image 20250626185833.png",
     "Code Spitz - Object Oriented JavaScript/AttachedFiles/Pasted image 20250626185829.png",
     "markdown/blog-markdown.md",
     "Code Spitz - Object Oriented JavaScript/AttachedFiles",
     "Excalidraw/Drawing 2025-06-26 18.47.16.excalidraw.md",
-    "Excalidraw",
     "헤드 퍼스트 디자인 패턴 14가지 GoF 필살 패턴/command-pattern.md",
     "헤드 퍼스트 디자인 패턴 14가지 GoF 필살 패턴/adaptor-pattern-facade-pattern.md",
     "헤드 퍼스트 디자인 패턴 14가지 GoF 필살 패턴/chain-of-responsibility-pattern.md",
     "헤드 퍼스트 디자인 패턴 14가지 GoF 필살 패턴/decorator-pattern.md",
     "헤드 퍼스트 디자인 패턴 14가지 GoF 필살 패턴/factory-pattern.md",
-    "헤드 퍼스트 디자인 패턴 14가지 GoF 필살 패턴/AttachedFiles/Pasted image 20250616140341.png",
     "Code Spitz - Object Oriented JavaScript",
-    "헤드 퍼스트 디자인 패턴 14가지 GoF 필살 패턴/AttachedFiles/Pasted image 20250616140341 복사본.png",
     "헤드 퍼스트 디자인 패턴 14가지 GoF 필살 패턴/builder-pattern.md",
     "헤드 퍼스트 디자인 패턴 14가지 GoF 필살 패턴/bridge-pattern.md",
     "builder-patte.md",
@@ -209,7 +219,6 @@
     "markdown/무제 파일.md",
     "헤드 퍼스트 디자인 패턴 14가지 GoF 필살 패턴/test1.md",
     "markdown",
-    "헤드 퍼스트 디자인 패턴 14가지 GoF 필살 패턴/test3.md",
     "테스트",
     "test/AttachedFiles",
     "test",
